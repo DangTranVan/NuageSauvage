@@ -5,64 +5,6 @@
             <div class="footer-logo">
                 <img src="<?php echo esc_html(get_theme_mod('html_footer_header')); ?>" alt="">
             </div>
-
-            <!-- <div class="row  gx-0">
-                <div class="col-lg-4">
-                    <div class="footer-item">
-                        <h3>
-                            <a href="">
-                                Informations de contact
-                            </a>
-                        </h3>
-                        <h4>
-                            Abonnez-vous à notre newsletter pour être informé des dernières nouvelles de Nuage Sauvage.
-                            <br>
-                            <br>
-                            Du lundi au samedi : 11h – 19h ; fermé le mercredi et dimanche
-                        </h4>
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="">
-                                    Adresse: 34bis rue Bichat-75010 Paris, France
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Hotline: 01 73 70 05 55
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Email: info@green-bridge.fr
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="icons">
-                            <a href="" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fal fa-envelope"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fas fa-phone-alt"></i>
-                            </a>
-                            <a href="" target="_blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 pl-lg-0">
-                    <div class="footer-item h-100">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNuageSauvage&amp;tabs=timeline&amp;width=340&amp;height=271&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="340" height="271" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </div>
-                </div>
-            </div> -->
             <div class="row gx-5">
                 <div class="col-lg-4">
                     <?php
@@ -214,29 +156,6 @@
                 <div class="col-lg-3 pl-lg-0">
                     <div class="footer-item h-100">
                         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNuageSauvage&tabs=timeline&width=340&height=271&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="271" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                        <!-- <a href="<?php //echo get_field('link_avis', 5); 
-                                        ?>" target="_blank" class="link-avis">
-                                    <div class="avis-client h-100 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="avis-client-data">
-                                            <p class="number-rate mb-0">9.8/10</p>
-                                            <span class="star-footer">
-                                                <fieldset class="rating">
-                                                    <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
-                                                    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-                                                    <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
-                                                    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
-                                                    <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
-                                                    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
-                                                    <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-                                                    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
-                                                    <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
-                                                    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Very bad - 0.5 stars"></label>
-                                                </fieldset>
-                                            </span>
-                                            <p class="clients mb-0">409 avis clients</p>
-                                        </div>
-                                    </div>
-                                </a> -->
                     </div>
                 </div>
             </div>

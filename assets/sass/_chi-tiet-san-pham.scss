@@ -10,35 +10,70 @@
   border-radius: 8.28125px;
   margin-bottom: 9px;
 }
+.woocommerce-product-gallery__wrapper {
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  .single-product-main-thumbnail-cus {
+    width: 90% !important;
+    .woocommerce-product-gallery__image {
+      height: 100%;
+
+      a {
+        img {
+          height: 100% !important;
+          // width: 445px !important;
+
+          aspect-ratio: 528/613;
+          border-radius: 8.28125px;
+        }
+      }
+    }
+  }
+
+  .single-product-thumbnail-cus {
+    width: 33% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    margin-left: 16px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .woocommerce-product-gallery__image {
+      margin-bottom: 16px;
+      width: 100% !important;
+
+      a {
+        img {
+          border-radius: 8.28125px;
+          max-width: unset !important;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        margin-bottom: 8.61px;
+      }
+    }
+
+    .woocommerce-product-gallery__image:last-child {
+      margin-bottom: 0px;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-left: 8.54px;
+    }
+  }
+}
 
 .slick-slide.slick-current.slick-active {
   padding-right: 10px;
 }
 
-/* .images {
-    width: 53% !important;
-    position: relative;
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out 0s;
-}
-
-.vertical-img-right.wpgis-slider-for {
-    width: 71%;
-} */
-
-/* #wpgis-gallery {
-    
-    width: 28% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    margin-left: 16px;
-    
-}
-
-#wpgis-gallery .slick-slide {
-    width: -webkit-fill-available;
-} */
 
 .woocommerce div.product div.summary {
   width: 44% !important;
@@ -81,7 +116,7 @@ p {
   display: flex;
   margin-bottom: 1rem;
 }
-.chitietsanpham{
+.chitietsanpham {
   display: flex;
   margin-bottom: 1rem;
   flex-direction: row-reverse;
@@ -106,7 +141,7 @@ p {
   padding-left: 12px;
   font-weight: 500;
   font-size: 16px;
-  // color: #a6a6a6;  
+  // color: #a6a6a6;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -362,19 +397,6 @@ p {
   text-align: center;
 }
 
-// @media (min-width: 992px) {
-//   .col-lg-3 {
-//     flex: 0 0 auto;
-//     width: 100%;
-//   }
-// }
-
-// @media (min-width: 992px) {
-//   .col-lg-8 {
-//     flex: 0 0 auto;
-//     width: 66.6666666667%;
-//   }
-// }
 
 .title-text-box {
   display: block !important;
