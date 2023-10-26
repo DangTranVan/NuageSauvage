@@ -1,0 +1,171 @@
+.contactez {
+  #loaihinhcongty {
+    width: 100%;
+    border: 1px solid #ececec;
+    padding: 0 10px;
+    color: #000000;
+  }
+  .contactez-top {
+    img {
+      width: 100%;
+    }
+    .info p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: #000f07;
+    }
+  }
+  .contactez-bottom {
+    background: #f6f7f8;
+    border-radius: 7px;
+    @media screen and (max-width: 576px) {
+      .content {
+        margin-bottom: 25px;
+        p {
+          width: 100% !important;
+        }
+      }
+    }
+    .form {
+      padding-right: 40px;
+
+      @media screen and (max-width: 1400px) {
+        padding: unset;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding: unset;
+      }
+
+      form {
+        p label {
+          width: 100%;
+
+          @media screen and (max-width: 576px) {
+            font-size: 15px;
+          }
+          span {
+            color: red;
+          }
+
+          textarea {
+            height: 126px;
+            max-height: 200px;
+            // width: 484px;
+            width: 100%;
+            border: 1px solid gainsboro;
+
+            @media screen and (max-width: 1400px) {
+              width: 100% !important;
+            }
+          }
+        }
+
+        p input {
+          // width: 484px;
+          width: 100%;
+          border: 1px solid gainsboro;
+
+          @media screen and (max-width: 1400px) {
+            width: 100% !important;
+          }
+          &::before {
+            content: "abc";
+          }
+        }
+
+        p input[type="submit"] {
+          background: #134d09;
+          border-radius: 4px;
+          // padding: 13px 28px 11px 28px;
+          border: 2px solid #134d09;
+          color: rgb(255, 255, 255);
+          max-height: 44px;
+          max-width: 85px;
+          aspect-ratio: 85/44;
+          &:hover {
+            background-color: #fff;
+            color: #134d09;
+          }
+          @media screen and (max-width: 576px) {
+            padding: 3px;
+            font-size: 13px;
+            max-width: 66px;
+          }
+        }
+      }
+    }
+    .content {
+      h3 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: #393939;
+      }
+      p {
+        width: 70%;
+        padding: 25px 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: #1c0c00;
+      }
+      .logo {
+        i {
+          font-size: 37px;
+          color: #134d09;
+        }
+        .logo-in {
+          i {
+            padding: 0 22px;
+          }
+        }
+      }
+    }
+  }
+  .contactez-maps {
+    iframe {
+      width: 100%;
+    }
+    @media screen and (max-width: 576px) {
+      iframe {
+        height: 200px !important;
+      }
+    }
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #000;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  width: 100%;
+  margin-left: 0px !important;
+  padding: 5px;
+  border-color: red !important;
+  color: red;
+  background: white;
+  border: 2px solid red;
+  border-radius: 12px;
+  box-shadow: 6px 5px 2px 1px rgba(255, 0, 0, 0.442);
+  &::after {
+    content: " ✘";
+  }
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  // width: 100%;
+  border-color: unset;
+  margin-left: 0px !important;
+  padding: 5px;
+  color: green;
+  background: white;
+  border: 2px solid green;
+  border-radius: 12px;
+  box-shadow: 6px 5px 2px 1px rgba(222, 71, 30, 0.2);
+  &::after {
+    content: " ✓";
+  }
+}

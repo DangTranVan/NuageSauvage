@@ -1,41 +1,87 @@
 .footer {
+  .footer-main {
+    padding: 30px 0;
+    background: #f2f2f2;
+    color: #000f07 !important;
 
-    color: #fff;
-
-    a {
-        color: #a8aaad;
-
-        &:hover {
-            color: #fff;
+    .container {
+      // max-width: 1416px !important;
+      .footer-logo {
+        padding-bottom: 24px;
+        border-bottom: 1px solid #35461f;
+        margin-bottom: 48px;
+        img {
+          width: 320px;
+          display: block;
+          margin: 0 auto;
         }
-    }
-
-    &-top {
-        background-color: #262a33;
-        padding: 48px;
-
-        &-title {
+      }
+      .row {
+        .col-lg-4 {
+          padding: 0 24px;
+          h3 {
+            font-size: 24px;
+            font-weight: 600;
             margin-bottom: 24px;
-            // text-align: center;
-            // font-weight: 600;
+            line-height: 22px;
+            color: #000f07;
+          }
+          h4 {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: justify;
+            line-height: 22px;
+            color: #000f07;
+          }
         }
+      }
 
-        &-menu-items {
-            list-style-type: none;
-            padding-left: 0;
-
-            li {
-                margin-bottom: 16px;
-            }
+      .icons {
+        padding-top: 1.2rem;
+        a {
+          padding-right: 1.2rem;
         }
+      }
     }
+  }
+  .footer-bottom {
+    background: #134d09;
+    color: #fff;
+    padding: 12px 0;
 
-    &-bottom {
-        height: 50px;
-        background-color: black;
+    .container {
+      max-width: 1416px !important;
+      p {
+        a {
+          color: #5a9b4f;
+        }
+        span {
+          color: #5a9b4f;
+        }
+      }
     }
+  }
 }
 
-@media (max-width: 991px) {
-    .footer {}
-}
+// .menu-item {
+//   padding-bottom: 10px;
+
+//   a {
+//     color: #fff !important;
+//   }
+// }
+// .list-unstyled {
+//   li {
+//     a {
+//       color: #fff;
+//     }
+//   }
+// }
+
+// .footer-item {
+//   h3 {
+//     a {
+//       color: #fff;
+//     }
+//   }
+// }

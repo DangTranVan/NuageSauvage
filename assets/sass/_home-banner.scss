@@ -1,0 +1,142 @@
+.home-banner {
+  position: relative;
+
+  .item {
+    background: black;
+    height: 600px;
+    width: 100%;
+
+    img {
+      height: 100%;
+      opacity: 0.6;
+    }
+  }
+
+  .nvt-banner-content {
+    width: 1200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 65px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .desc {
+      margin: 47px 0 34px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .btn {
+      flex: 1 0 0px;
+      font: 20px/1 "Nunito", sans-serif;
+      text-align: center;
+      margin: 15px 7.5px;
+      border: 1px solid;
+      transition: all 0.5s;
+      min-width: 285px;
+      padding: 25px 32px;
+      font-weight: 500;
+      line-height: var(--font-size);
+      border-radius: 24px;
+      display: block;
+      outline: none;
+      text-decoration: none;
+      font-size: var(--font-size);
+      letter-spacing: 0.5px;
+      background: var(--background);
+      color: var(--text);
+      --background: white;
+      --font-size: 16px;
+    }
+  }
+}
+
+@mixin btn__effect--2($child: 1) {
+  &:nth-child(#{$child}) {
+    transition-delay: ($child * 0.04 * 1s);
+  }
+}
+
+.btn__effect--2 {
+  position: relative;
+  overflow: hidden;
+  &:before,
+  span {
+    transition: all 0.4s;
+    transition-timing-function: cubic-bezier(0.85, 0, 0.2, 1);
+  }
+  &:before {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    content: attr(data-text);
+    transform: translate3d(0, 10px, 0);
+  }
+  span {
+    display: inline-block;
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+      opacity: 0;
+      transform: translate3d(0, 40px, 0);
+    }
+    span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      @include btn__effect--2();
+      @include btn__effect--2(2);
+      @include btn__effect--2(3);
+      @include btn__effect--2(4);
+      @include btn__effect--2(5);
+      @include btn__effect--2(6);
+      @include btn__effect--2(7);
+      @include btn__effect--2(8);
+      @include btn__effect--2(9);
+      @include btn__effect--2(10);
+    }
+  }
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  width: 48px !important;
+  height: 16px;
+  background: white;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+}

@@ -1,0 +1,443 @@
+.woocommerce-MyAccount-navigation {
+  display: none;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+  width: 100%;
+}
+.user {
+  @media screen and (max-width: 576px) {
+    .button {
+      margin: 10px 20px;
+    }
+    .call-to-button {
+      border-radius: 50px !important;
+      height: unset !important;
+      display: block !important;
+    }
+  }
+
+  .menu-account {
+    // border: 1px s
+    margin: 0 15px 15px 15px;
+    border-radius: 25px;
+    padding: 18px;
+    box-shadow: 0 0 8px 0 #00000036;
+    // margin: 15px;
+
+    .avatar-menu {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      img {
+        border-radius: 50px;
+        border: 1px solid $main-color;
+      }
+    }
+
+    .picture-avt {
+      border-bottom: 1px solid $main-color;
+      h4 {
+        color: $main-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .form-contol-cus {
+    label {
+      font-weight: 500;
+      color: $main-color;
+    }
+
+    .form-control-lg {
+      font-size: 1rem !important;
+      width: 100%;
+      outline: none;
+      border: 1px solid $main-color;
+    }
+
+    button.woocommerce-Button.button {
+      padding: 12px;
+      background: #fff;
+      // border-radius: 8px 0 8px 0;
+      border-radius: 50px;
+      border: 1px solid $main-color;
+      color: #000;
+      background-image: linear-gradient($main-color 0 0);
+      background-size: 100% 0.03em; /* .08em is our fixed height; modify as needed. */
+      background-position: 200% 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.3s, background-position 0.3s 0.3s;
+
+      &:hover {
+        transition: background-size 0.3s 0.3s, background-position 0.3s;
+        background-size: 100% 100%;
+        background-position: 100% 100%;
+        transition: color 0.5s;
+        color: #fff;
+      }
+    }
+  }
+  .user .form-contol-cus label {
+    color: #000 !important;
+  }
+  .hidden__mobile {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .call-to-button {
+    padding: 12px;
+    border: none;
+    transition: 0.2s ease-out all;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .call-to-button:focus {
+    outline: none;
+  }
+
+  .call-to-button:hover i {
+    color: #138d26;
+  }
+  .call-to-button:hover .button-text {
+    color: #138d26;
+  }
+
+  .button-text {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $main-color;
+
+    i {
+      color: $main-color;
+    }
+  }
+
+  .button-icon {
+    position: relative;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  svg {
+    display: inline;
+    height: 25px;
+    width: 25px;
+    transition: 0.5s ease-in-out all;
+  }
+
+  .st0 {
+    fill: #d75050;
+    transition: 0.2s ease-in-out all;
+  }
+
+  .call-to-button:hover svg {
+    animation-name: arrow;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes arrow {
+    from {
+      transform: translateX(3px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+.woocommerce-Address-title {
+  a {
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 8px;
+  }
+}
+
+.coupon-component {
+  padding: 24px;
+  text-align: center;
+  border: 1px solid;
+  .coupon-point {
+    color: #fa5130;
+    font-size: 24px;
+  }
+}
+.coupon-component-available {
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid;
+  .coupon-point-available {
+  }
+}
+
+.xoo-aff-group {
+  display: block !important;
+  text-align: center;
+}
+.back-dashboard {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  a {
+    padding: 10px;
+    background: #134d09;
+    color: white;
+    border-radius: 12px;
+    // &:hover {
+    //   box-shadow: 4px 4px 6px 1px #ccc;
+    // }
+  }
+}
+.wc-cancel-order {
+  background: #ff000075 !important;
+}
+@media screen and (max-width: 576px) {
+  .wr-available-coupons .item.line {
+    padding: unset !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .wr-available-coupons .item.line .coupon-code {
+    width: 100% !important;
+    border-right: unset !important;
+    border-bottom: 0.18em dashed #fff;
+    &::before {
+      bottom: -11px !important;
+      left: -0.6em !important;
+      top: unset !important;
+    }
+    &::after {
+      bottom: -11px !important;
+      right: -0.6em !important;
+    }
+  }
+}
+.wr-available-coupons {
+  margin-top: 20px;
+  .item.line {
+    background: #7b8893 !important;
+    .coupon-code {
+      border-right: 0.18em dashed #fff;
+      color: #fff;
+      position: relative;
+      width: 232px;
+      padding: 20px 0;
+      font-size: 18px;
+
+      &::before {
+        top: -0.9em;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0.9em;
+        height: 0.9em;
+        background: #fff;
+        border-radius: 50%;
+        right: -0.6em;
+      }
+      &::after {
+        bottom: -0.9em;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0.9em;
+        height: 0.9em;
+        background: #fff;
+        border-radius: 50%;
+        right: -0.6em;
+      }
+    }
+    .coupon-desc {
+      font-size: 18px;
+      padding: 20px;
+      color: white;
+    }
+  }
+}
+label {
+  font-weight: 500;
+  color: $main-color;
+}
+
+.woocommerce form .form-row input.input-text {
+  width: 100%;
+  outline: none;
+  border: 1px solid $main-color;
+  min-height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+.input-text {
+}
+
+button.woocommerce-Button.button {
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px 0 8px 0;
+  border: 1px solid $main-color;
+  color: #000;
+  background-image: linear-gradient($main-color 0 0);
+  background-size: 100% 0.03em; /* .08em is our fixed height; modify as needed. */
+  background-position: 200% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0.3s 0.3s;
+
+  &:hover {
+    transition: background-size 0.3s 0.3s, background-position 0.3s;
+    background-size: 100% 100%;
+    background-position: 100% 100%;
+    transition: color 0.5s;
+    color: #fff;
+    background: #134d09;
+  }
+}
+
+.title_profil {
+  margin: 20px 32px 0 32px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #9999994d;
+  // border-end-end-radius: 30px;
+  // border-end-start-radius: 30px;
+
+  h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  h4 {
+    font-size: 20px;
+    color: #000;
+  }
+}
+.form_boder {
+  // padding: 32px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: row-reverse;
+  .section-inner {
+    display: flex;
+    p {
+      text-align: center;
+      // margin-left: 2rem;
+    }
+    .form_img_bt {
+      text-align: center;
+      border-left: 1px solid #9999994d;
+      margin-left: 3rem;
+      // display: flex;
+      // margin-top: 1.5rem;
+      .border_img {
+        img {
+          border-radius: 50%;
+          border: 1px solid #134d09;
+          width: 180px;
+          height: 180px;
+        }
+      }
+      .submit_update_avatar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1.5rem;
+        .btn-submit {
+          position: relative;
+          background-color: #fff;
+          color: #134d09;
+          border: 1px solid #000;
+          border-radius: 50px;
+          min-width: 200px;
+          padding: 10px 0;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          outline: none;
+          box-shadow: 1px 1px 4px 1px transparent;
+          transition: box-shadow 300ms ease-in-out;
+
+          &:hover {
+            box-shadow: 1px 1px 6px 1px #ccc;
+            background: #fff;
+            color: #134d09;
+            border: 2px solid green !important;
+          }
+
+          &:before {
+            content: "confirmé";
+            position: absolute;
+            z-index: 500;
+            transform: rotateX(180deg);
+
+            color: #fff;
+            letter-spacing: 1px;
+            opacity: 0;
+            transition: none;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+            opacity: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0ebeff;
+            border-radius: 50px;
+            transition: width 10ms 600ms ease-in-out,
+              background-color 300ms ease-in, opacity 250ms 300ms ease-in;
+          }
+        }
+
+        .is-active {
+          transform: rotateX(180deg);
+          background-color: #0ebeff;
+          box-shadow: 1px 1px 4px 1px transparent !important;
+
+          transition: transform 300ms ease-in-out,
+            background-color 300ms ease-in;
+
+          &:after {
+            opacity: 1;
+            background-color: green;
+            width: 100%;
+
+            transition: width 1s 0.5s ease-in-out,
+              background-color 300ms 300ms ease-in, opacity 250ms 300ms ease-in;
+          }
+          &:before {
+            opacity: 1;
+            transition: opacity 250ms 1.5s ease-in;
+          }
+        }
+      }
+    }
+  }
+}
+
+fieldset {
+  padding-top: 24px;
+
+  legend {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: #134d09;
+  }
+}
+.right_button {
+  display: flex;
+  justify-content: end;
+}

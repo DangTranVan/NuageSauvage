@@ -1,4 +1,5 @@
 <?php
+
 /**
  * My Account page
  *
@@ -15,22 +16,35 @@
  * @version 3.5.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * My Account navigation.
  *
  * @since 2.6.0
  */
-do_action( 'woocommerce_account_navigation' ); ?>
-
+do_action('woocommerce_account_navigation'); ?>
+<h2>Votre compte</h2>
+<style>
+	h1 {
+		display: none;
+	}
+	h2 {
+		text-align: center;
+		padding: 50px 0;
+		font-size: 36px;
+	}
+</style>
 <div class="woocommerce-MyAccount-content">
 	<?php
-		/**
-		 * My Account content.
-		 *
-		 * @since 2.6.0
-		 */
-		do_action( 'woocommerce_account_content' );
+	/**
+	 * My Account content.
+	 *
+	 * @since 2.6.0
+	 */
+	do_action('woocommerce_account_content');
 	?>
+	<div class="back-dashboard text-center fw-bold fs-5">
+		<a href="<?php echo get_home_url() ?>/user-account/"><i class="fas fa-caret-circle-left"></i>&nbsp;Retour</a>
+	</div>
 </div>

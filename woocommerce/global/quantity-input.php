@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Product quantity inputs
  *
@@ -11,41 +12,72 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates
- * @version 4.0.0
+ * @package WooCommerce/Templates
+ * @version 3.4.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-if ( $max_value && $min_value === $max_value ) {
-	?>
+if ($max_value && $min_value === $max_value) {
+?>
 	<div class="quantity hidden">
-		<input type="hidden" id="<?php echo esc_attr( $input_id ); ?>" class="qty" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $min_value ); ?>" />
+		<input type="hidden" id="<?php echo esc_attr($input_id); ?>" class="qty" name="<?php echo esc_attr($input_name); ?>" value="<?php echo esc_attr($min_value); ?>" />
 	</div>
-	<?php
+<?php
 } else {
 	/* translators: %s: Quantity. */
-	$label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'woocommerce' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'woocommerce' );
-	?>
+	$labelledby = !empty($args['product_name']) ? sprintf(__('%s quantity', 'woocommerce'), strip_tags($args['product_name'])) : '';
+?>
 	<div class="quantity">
-		<?php do_action( 'woocommerce_before_quantity_input_field' ); ?>
-		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
-		<input
-			type="number"
-			id="<?php echo esc_attr( $input_id ); ?>"
-			class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
-			step="<?php echo esc_attr( $step ); ?>"
-			min="<?php echo esc_attr( $min_value ); ?>"
-			max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
-			name="<?php echo esc_attr( $input_name ); ?>"
-			value="<?php echo esc_attr( $input_value ); ?>"
-			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ); ?>"
-			size="4"
-			placeholder="<?php echo esc_attr( $placeholder ); ?>"
-			inputmode="<?php echo esc_attr( $inputmode ); ?>"
-			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
-		/>
-		<?php do_action( 'woocommerce_after_quantity_input_field' ); ?>
+		<label class="screen-reader-text" for="<?php echo esc_attr($input_id); ?>"><?php esc_html_e('Quantity', 'woocommerce'); ?></label>
+		<input type="button" value="-" class="qty_button minus" />
+		<input type="number" id="<?php echo esc_attr($input_id); ?>" class="input-text qty text" step="<?php echo esc_attr($step); ?>" min="<?php echo esc_attr($min_value); ?>" max="<?php echo esc_attr(0 < $max_value ? $max_value : ''); ?>" name="<?php echo esc_attr($input_name); ?>" value="<?php echo esc_attr($input_value); ?>" title="<?php echo esc_attr_x('Qty', 'Product quantity input tooltip', 'woocommerce'); ?>" size="4" pattern="<?php echo esc_attr($pattern); ?>" inputmode="<?php echo esc_attr($inputmode); ?>" aria-labelledby="<?php echo esc_attr($labelledby); ?>" />
+		<input type="button" value="+" class="qty_button plus" />
 	</div>
-	<?php
+<?php
 }
+?>
+
+<style>
+	.quantity input::-webkit-outer-spin-button,
+	.quantity input::-webkit-inner-spin-button {
+		display: none;
+		margin: 0;
+	}
+
+	.quantity input.qty {
+		appearance: textfield;
+		-webkit-appearance: none;
+		-moz-appearance: textfield;
+	}
+
+	.quantity input.qty_button {
+		-webkit-appearance: button;
+		width: 40px;
+		height: 33px;
+		background: none !important;
+		content: "\f068";
+		font-family: fontawesome;
+		font-size: 19px;
+		color: #a6a9b2;
+		text-align: center;
+		/* line-height: 33px; */
+		cursor: pointer;
+		border: none;
+		font-weight: 900 !important;
+	}
+
+	.quantity .input-text {
+		height: 30px;
+		border: none;
+		outline: none;
+		font-size: 24px;
+		/* font-weight: bold; */
+		width: 50px !important;
+	}
+
+	.quantity {
+		display: inline-flex;
+		/* border: 1px solid #ddd; */
+	}
+</style>

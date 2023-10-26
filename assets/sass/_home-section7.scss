@@ -1,0 +1,142 @@
+.home_section7 {
+  .section7-gt-wrap {
+    height: 309px;
+    background-image: url(https://nuagesauvage.fr/wp-content/themes/NUAGE-SAUVAGE/assets/images/nvt/thanhngangoduoi.jpg);
+    background-attachment: fixed;
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .wrap-benner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+
+      .container {
+        .content {
+          // margin: 20px 0 35px;
+
+          .form {
+            height: 65px;
+            form {
+              display: inline-block;
+              margin-left: 50%;
+              transform: translateX(-50%);
+              position: relative;
+
+              label {
+                width: 100%;
+                display: inline-block;
+
+                span {
+                  position: relative;
+
+                  input {
+                    background: #ffffff;
+                    border-radius: 60px;
+                    width: 687px;
+                    height: 60px;
+                    text-indent: 20px;
+                    font-style: italic;
+                  }
+                }
+              }
+
+              .btn-cus-nvt {
+                background: #134d09;
+                border-radius: 60px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 25px;
+                color: #ffffff;
+                width: 158px;
+                height: 50px;
+                padding-right: 5px;
+                outline: 0;
+                border: 0;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                cursor: pointer;
+                transition: all 400ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+                box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+              }
+
+              .btn-cus-nvt:hover {
+                color: rgba(255, 255, 255, 0.85);
+                box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section4-gt-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.505);
+  }
+}
+.home-contact
+  .garden-banner
+  .banner-wrap
+  .content
+  .form
+  input.btn-cus-nvt:hover {
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgba(169, 25, 32, 0.7) 0 80px 0px 2px inset;
+}
+
+@media screen and (max-width: 992px) {
+  .section11 {
+    &-benner {
+      background-size: cover;
+      .benner-wrap {
+        .contenner {
+          .content {
+            width: 100%;
+            padding: 0 10%;
+            .form {
+              width: 100%;
+              form {
+                width: 100%;
+                label {
+                  span {
+                    input {
+                      width: 100%;
+                      font-size: 85%;
+                      text-indent: 4%;
+                    }
+                  }
+                }
+
+                .btn-cus-nvt {
+                  width: 20%;
+                }
+
+                .btn-cus-nvt:hover {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 592px) {
+  .section11-benner .benner-wrap .contenner .content {
+    width: 100%;
+    padding: 0;
+  }
+}

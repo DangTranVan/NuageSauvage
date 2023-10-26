@@ -1,0 +1,294 @@
+.shop_product_item {
+  .card {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    // height: 425.5px;
+    height: 411.5px;
+    width: 334.15625px;
+    border-radius: 9.25px;
+    border: none;
+    padding: 23.14px 23.14px 0px 23.14px;
+
+    &:hover {
+      // .overlay {
+      //   opacity: 0.7;
+      // }
+
+      .card-image {
+        .card-img-top {
+          // height: 238.31px;
+          // width: 286.9px;
+          transform: scale(1.05);
+          // border-radius: 20px;
+        }
+
+        // .addcart {
+        //   display: block;
+        // }
+
+        .seemore {
+          // display: block;
+          height: 51px;
+
+          @media screen and (max-width: 576px) {
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .card-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+
+      .card-img-top {
+        height: 238.31px;
+        width: 286.9px;
+        margin: 0px;
+        object-fit: cover;
+
+        border-radius: 20px;
+
+        @media screen and (max-width: 1200px) {
+          height: 159.31px !important;
+        }
+
+        @media screen and (max-width: 576px) {
+          height: 151.31px !important;
+          width: 100% !important;
+        }
+      }
+
+      .addcart {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 49%;
+
+        z-index: 3;
+
+        .woocommerce.add_to_cart_inline {
+          margin: 0px !important;
+
+          a {
+            border-radius: 69.375px;
+            padding: 12.9px 16.5px;
+            background: $main-color;
+            transition: ease 0.5s;
+            color: white;
+            font-weight: 700;
+            font-size: 17.2px;
+            line-height: 25px;
+            margin: 0px;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            i {
+              margin-left: 7px;
+              color: $main-color;
+              // font-family: "Font Awesome 5 Free";
+              // font-weight: 700;
+              font-size: 12px;
+              // content: "\f07a";
+              background: white;
+              border-radius: 50%;
+              padding: 4px 5px 4px 4px;
+
+              @media screen and (max-width: 576px) {
+                font-size: 9px;
+                margin-left: 3px;
+              }
+            }
+
+            @media screen and (max-width: 576px) {
+              padding: 8px 10px;
+              font-size: 10.5px;
+              line-height: 16px;
+            }
+
+            @media screen and (max-width: 375px) {
+              padding: 8px 8px;
+              font-size: 9px;
+            }
+          }
+
+          .added_to_cart {
+            display: none !important;
+          }
+        }
+      }
+
+      .seemore {
+        // display: none;
+        height: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        z-index: 3;
+        transition: height 0.5s;
+
+        .btn-seemore {
+          padding: 12.94px 39.8px;
+          width: 100%;
+          border-radius: 0px 0px 20px 20px;
+          color: white;
+          background: $main-color;
+          transition: ease 0.5s;
+
+          i {
+            margin-left: 8px;
+            color: $main-color;
+            background: white;
+            border-radius: 50%;
+            padding: 7px 10px 5px 10px;
+            font-size: 14px;
+
+            @media screen and (max-width: 1200px) {
+              padding: 6px 8px 5px 8px !important;
+              font-size: 8px;
+            }
+
+            @media screen and (max-width: 576px) {
+              padding: 4px 6px 4px 8px;
+              font-size: 11px;
+            }
+          }
+
+          // &:hover {
+          // transform: scale(1.1);
+          // background: white;
+          // color: $main-color;
+          // box-shadow: 0 0 0 0.15rem rgba($color: $main-color, $alpha: 0.25);
+
+          // i {
+          //   background: $main-color;
+          //   color: white;
+          // }
+          // }
+
+          &:focus {
+            box-shadow: unset !important;
+          }
+
+          @media screen and (max-width: 1200px) {
+            padding: 12.94px 7.8px;
+          }
+
+          @media screen and (max-width: 576px) {
+            padding: 1.9px 6.5px;
+            font-size: 14px;
+          }
+        }
+
+        @media screen and (max-width: 576px) {
+          // bottom: 33px;
+        }
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 23.14px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+
+      .card-title {
+        margin: 0px !important;
+
+        .title {
+          color: $text-dark-color !important;
+          line-height: 33px;
+          margin: 0px !important;
+          font-size: 24px;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 18px;
+          }
+
+          @media screen and (max-width: 576px) {
+            // font-weight: 400;
+            line-height: unset !important;
+            font-size: 13.5px;
+          }
+        }
+      }
+
+      .card-price {
+        // margin-top: 12.98px;
+
+        div.price {
+        }
+
+        span.price {
+          margin: 0px;
+          font-size: 24px !important;
+          line-height: 33px !important;
+
+          font-weight: 700 !important;
+          color: $main-color !important;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 18px !important;
+          }
+
+          @media screen and (max-width: 576px) {
+            // font-weight: 400 !important;
+            line-height: unset !important;
+            font-size: 13.5px !important;
+          }
+        }
+
+        @media screen and (max-width: 576px) {
+          margin-top: unset;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        padding: 0.3rem 2px 2px 2px !important;
+      }
+    }
+
+    // .overlay {
+    //   cursor: pointer;
+    //   position: absolute;
+    //   opacity: 0;
+    //   top: 0px;
+    //   left: 0px;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 2;
+
+    //   background: rgba($color: #f4faed, $alpha: 1);
+    //   border-bottom: 9px solid $main-color;
+    //   border-radius: 9.25px;
+    //   transition: ease 0.5s;
+    // }
+
+    @media screen and (max-width: 1400px) {
+      width: auto;
+    }
+
+    @media screen and (max-width: 1200px) {
+      height: 320.5px !important;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding: 6.14px;
+      // height: 248.5px;
+      height: 240.5px !important;
+    }
+  }
+}
+
+.woocommerce-page.columns-3 ul.products li.product,
+.woocommerce.columns-3 ul.products li.product {
+  @media screen and (max-width: 576px) {
+    margin: 0 0 10px !important;
+  }
+}
