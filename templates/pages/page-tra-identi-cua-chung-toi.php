@@ -2,32 +2,13 @@
 
 <?php get_header(); ?>
 <main class="home">
-    <section class="section1_banner">
-        <img src="https://nuagesauvage.fr/wp-content/uploads/2022/12/banner-chinh-1-scaled-e166988727-1.jpg" alt="" onerror="this.src='https://ciat.cgiar.org/wp-content/uploads/image-not-found.png';">
-        <div class="overlay"></div>
-        <div class="path">
-            <h2 class="breadcrumb">
-                <span class="notranslate"> NUAGE SAUVAGE /</span>
-                <span class="ms-2">
-                    TRÀ IDENTI CỦA CHÚNG TÔI
-                </span>
-            </h2>
-        </div>
-    </section>
+    <?php get_template_part('templates/block/introduce', 'banner'); ?>
     <section class="section2_introduce">
-        <div class="section2_breadcrumb">
+        <section class="section__breadcrumb" style="margin-bottom: 0;">
             <div class="container">
-                <div class="breadcrumbs">
-                    <a class="aaa" href="">
-                        Trang chủ
-                    </a>
-                    <span> > </span>
-                    <a href="#" rel="nofollow">
-                        TRÀ IDENTI CỦA CHÚNG TÔI
-                    </a>
-                </div>
+                <?php the_breadcrumb(); ?>
             </div>
-        </div>
+        </section>
         <div class="section2_content">
             <div class="bg">
                 <div class="container">

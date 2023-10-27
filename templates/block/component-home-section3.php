@@ -16,11 +16,9 @@
                         } else {
                         }
                         ?>
-                        <span class="text padding-text-0 padding-txt-49">
-                            <h1 style="vertical-align: inherit;"><?php echo $title ?></h1>
+                        <span class="text padding-text-0 padding-txt-49"><?php echo $title ?>
                         </span>
-                        <span class="absolute-text padding-txt-70 top-50">
-                            <h1 style="vertical-align: inherit;"><?php echo $title2 ?></h1>
+                        <span class="absolute-text padding-txt-70 top-50"><?php echo $title2 ?>
                         </span>
                     </div>
                     <span class="p-2">
@@ -28,7 +26,7 @@
                             <?php echo $content ?>
                         </p>
                     </span>
-                    <a class="btn-cus-nvt btn__effect--3" href="<?php echo get_home_url() ?>/danh-muc-san-pham/qua/" data-text="<?php echo $button ?>">
+                    <a class="btn-cus-nvt btn__effect--3 d-sm-block d-none" href="<?php echo get_home_url() ?>/danh-muc-san-pham/qua/" data-text="<?php echo $button ?>">
                         <span class="seemore">
                             <?php echo $button ?>
                         </span>
@@ -51,6 +49,12 @@
                     } else {
                     }
                     ?>
+                    <a class="btn-cus-nvt btn__effect--3 d-block d-sm-none" href="<?php echo get_home_url() ?>/danh-muc-san-pham/qua/" data-text="<?php echo $button ?>">
+                        <span class="seemore">
+                            <?php echo $button ?>
+                        </span>
+
+                    </a>
                     <!-- <div class="image-top">
                         <img src="https://nuagesauvage.fr/wp-content/uploads/2022/12/trangchu1-scaled-1.jpeg" alt="Image absolute">
                     </div> -->

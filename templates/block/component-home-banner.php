@@ -1,5 +1,5 @@
 <section class="home-banner">
-    <div id="banner-carousel" class="owl-carousel owl-theme">
+    <div id="banner-carousel" class="owl-carousel banner-home owl-theme">
         <?php
         $images = get_field('image_banner', 2);
         $size = 'full';
@@ -11,13 +11,6 @@
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-
-        <!-- <div class="item">
-            <img src="https://nuagesauvage.fr/wp-content/uploads/2023/09/popup-web-2.jpg" alt="">
-        </div>
-        <div class="item">
-            <img src="https://nuagesauvage.fr/wp-content/uploads/2023/09/popup-web-3.jpg" alt="">
-        </div> -->
     </div>
     <div class="nvt-banner-content">
         <?php

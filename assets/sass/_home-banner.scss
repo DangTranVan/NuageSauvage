@@ -10,6 +10,10 @@
       height: 100%;
       opacity: 0.6;
     }
+
+    @media screen and (max-width: 576px) {
+      height: 200px !important;
+    }
   }
 
   .nvt-banner-content {
@@ -31,6 +35,10 @@
       line-height: 65px;
       text-align: center;
       color: #ffffff;
+      @media screen and (max-width: 576px) {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
     }
 
     .desc {
@@ -40,6 +48,11 @@
       line-height: 44px;
       text-align: center;
       color: #ffffff;
+      @media screen and (max-width: 576px) {
+        font-size: 12px !important;
+        line-height: 14px !important;
+        margin: 0px 0 12px !important;
+      }
     }
 
     .btn {
@@ -63,6 +76,27 @@
       color: var(--text);
       --background: white;
       --font-size: 16px;
+
+      @media screen and (max-width: 1200px) {
+       margin-bottom: 5rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        width: 127px !important;
+        min-width: 178px !important;
+        height: 22px !important;
+        padding: 11px 2px !important;
+        font-size: 10px;
+        margin: 0 0 20px 0px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      padding: 0 20px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 257px !important;
     }
   }
 }
@@ -88,6 +122,9 @@
     width: 100%;
     content: attr(data-text);
     transform: translate3d(0, 10px, 0);
+    @media screen and (max-width: 576px) {
+      top: -7px;
+    }
   }
   span {
     display: inline-block;
@@ -97,6 +134,9 @@
     top: 16px;
     left: 0;
     width: 100%;
+    @media screen and (max-width: 576px) {
+      top: 4px;
+    }
   }
   &:hover {
     &:before {
@@ -126,6 +166,9 @@
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 2;
+  @media screen and (max-width: 576px) {
+    bottom: 15px !important;
+  }
 }
 
 .owl-theme .owl-dots .owl-dot.active span,
@@ -139,4 +182,7 @@
   width: 16px;
   height: 16px;
   background-color: white;
+  @media screen and (max-width: 576px) {
+    zoom: 0.5 !important;
+  }
 }

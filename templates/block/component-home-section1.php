@@ -28,11 +28,9 @@
             <div class="col-xl-4 col-12 backg-white">
                 <div class="content">
                     <div class="title-text-box d-block text-start">
-                        <span class="text padding-text-0 padding-txt-49">
-                            <h1 style="vertical-align: inherit;"><?php echo $title ?></h1>
+                        <span class="text padding-text-0 padding-txt-49"><?php echo $title ?>
                         </span>
-                        <span class="absolute-text padding-txt-70 top-50">
-                            <h1 style="vertical-align: inherit;"><?php echo $title2 ?></h1>
+                        <span class="absolute-text padding-txt-70 top-50"><?php echo $title2 ?>
                         </span>
                     </div>
                     <span class="p-2">

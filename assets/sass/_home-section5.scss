@@ -1,17 +1,37 @@
 .home_section5 {
   margin: 80px 0;
 
+  @media screen and (max-width: 576px) {
+    margin: 40px 0 80px 0;
+  }
+
   .title-top {
     position: relative;
     user-select: none;
     padding-bottom: 3rem !important;
     text-align: center;
 
+    @media screen and (max-width: 990px) {
+      display: block !important;
+    }
+
     .title-item {
       display: inline-block;
       position: relative;
       text-transform: uppercase;
       padding: 0 !important;
+      vertical-align: inherit;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 49px;
+      text-transform: uppercase;
+      color: #35461f;
+
+      @media screen and (max-width: 990px) {
+        font-size: 24px !important;
+        line-height: 33px !important;
+        text-align: center;
+      }
 
       h1 {
         vertical-align: inherit;
@@ -31,6 +51,18 @@
       top: -36px;
       width: 100%;
       top: -50px !important;
+      vertical-align: inherit;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 115px;
+      color: #134d09;
+      font-family: "Dancing Script", cursive;
+
+      @media screen and (max-width: 989.98px) {
+        top: -30px !important;
+        font-size: 48px !important;
+        line-height: 55px !important;
+      }
 
       h1 {
         vertical-align: inherit;
@@ -130,6 +162,9 @@
           }
         }
       }
+      .owl-nav {
+        display: none;
+      }
     }
     &_wrap {
       margin-top: 30px;
@@ -147,4 +182,32 @@
 .owl-item {
   width: 437.333px;
   margin-right: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  .home_section5 .owl-theme .owl-dots .owl-dot span {
+    margin: 2px 3px;
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .home_section5 .owl-theme .owl-dots .owl-dot.active span {
+    background: #134d09 !important;
+  }
+  .home_section5 .owl-dots {
+    margin: 0 !important;
+  }
+}
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #d6d6d6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 0.2s ease;
+  border-radius: 30px;
+}
+.home_section5 .owl-dots .owl-dot.active span,
+.home_section5 .owl-dots .owl-dot:hover span {
+  background: #869791;
 }

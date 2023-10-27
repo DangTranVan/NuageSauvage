@@ -2,6 +2,10 @@
   background: #f9f9f9;
   padding: 80px 0;
 
+  @media screen and (max-width: 576px) {
+    padding: 40px 0;
+  }
+
   .container {
     // max-width: 1416px !important;
 
@@ -13,10 +17,22 @@
         flex-direction: column;
         padding-right: 90px;
 
+        @media screen and (max-width: 1400px) {
+          padding-right: 0 !important;
+        }
+        @media screen and (max-width: 989.98px) {
+          align-items: center !important;
+          margin-bottom: 30px !important;
+        }
+
         .title-text-box {
           position: relative;
           user-select: none;
           padding-right: 20px;
+
+          @media screen and (max-width: 990px) {
+            display: block !important;
+          }
 
           .text {
             position: relative;
@@ -24,6 +40,18 @@
             font-size: 36px;
             line-height: 49px;
             text-transform: uppercase;
+
+            @media screen and (max-width: 1200px) {
+              padding: 35px 0 !important;
+              font-size: 30px !important;
+            }
+            @media screen and (max-width: 990px) {
+              padding: 30px 0 !important;
+              font-size: 24px !important;
+              line-height: 33px !important;
+              text-align: center;
+              color: #35461f;
+            }
 
             h1 {
               color: #35461f;
@@ -35,9 +63,17 @@
             opacity: 0.1;
             text-align: center;
             left: 0;
-            top: -36px;
             top: -50px !important;
             width: 100%;
+            font-family: "Dancing Script", cursive;
+            font-weight: 700;
+            font-size: 96px;
+            line-height: 115px;
+            color: #134d09;
+
+            @media screen and (max-width: 989.98px) {
+              top: -30px !important;
+            }
 
             h1 {
               font-family: "Dancing Script", cursive;
@@ -49,7 +85,7 @@
           }
         }
 
-        .p-2 p{
+        .p-2 p {
           font-weight: 600;
           font-size: 23px;
           line-height: 33px;
@@ -57,6 +93,11 @@
           padding-bottom: 3rem !important;
           padding-top: 3rem !important;
           margin-bottom: 1rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 16px !important;
+            line-height: 24px !important;
+          }
         }
 
         .btn-cus-nvt {
@@ -76,7 +117,7 @@
           font-size: 16px;
           letter-spacing: 0.5px;
           background: #134d09;
-          color:#fff;
+          color: #fff;
           --shadow-hover: 0 4px 20px -2px rgba(19, 77, 9, 0.5);
           --move-hover: -4px;
           --shadow: 0 2px 8px -1px rgba(19, 77, 9, 0.32);
@@ -92,6 +133,16 @@
             --y: var(--move-hover);
             --shadow: var(--shadow-hover);
           }
+          @media (min-width: 576px)  {
+            display: block !important;
+          }
+
+          // @media screen and (max-width: 576px) {
+          //   position: absolute;
+          //   bottom: -115px;
+          //   left: 50%;
+          //   transform: translate(-50%, 0);
+          // }
         }
       }
 
@@ -99,6 +150,18 @@
         background-image: url("	https://nuagesauvage.fr/wp-content/themes/NUAGE-SAUVAGE/assets/images/nvt/bg-decouvrir.png");
         height: 586px;
         position: relative;
+
+        @media screen and (max-width: 875px) {
+          height: 500px !important;
+        }
+        @media screen and (max-width: 1200px) {
+          height: 500px !important;
+        }
+        @media screen and (max-width: 576px) {
+          height: 250px !important;
+          width: 95%;
+          margin-bottom: 125px;
+        }
 
         .image-top {
           img {
@@ -115,6 +178,71 @@
             right: -40px;
             position: absolute;
             transition: 0.3s;
+
+            @media screen and (max-width: 1400px) {
+              width: 670px;
+            }
+            @media screen and (max-width: 1200px) {
+              width: calc(100% - 66px) !important;
+              height: 490px !important;
+              bottom: -34px !important;
+              right: 0 !important;
+            }
+            @media screen and (max-width: 875px) {
+              width: calc(100% - 66px) !important;
+              height: 490px !important;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100% !important;
+              height: 268px !important;
+              top: 21px !important;
+              right: -24px !important;
+            }
+          }
+        }
+
+        .btn-cus-nvt {
+          font: 20px/1 "Nunito", sans-serif;
+          text-align: center;
+          margin: 15px 7.5px;
+          border: 1px solid #134d09;
+          transition: all 0.5s;
+          max-width: 255px;
+          padding: 14px 9px;
+          font-weight: 700;
+          line-height: var(--font-size);
+          border-radius: 24px;
+          display: block;
+          outline: none;
+          text-decoration: none;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          background: #134d09;
+          color: #fff;
+          --shadow-hover: 0 4px 20px -2px rgba(19, 77, 9, 0.5);
+          --move-hover: -4px;
+          --shadow: 0 2px 8px -1px rgba(19, 77, 9, 0.32);
+          --shadow-hover: 0 4px 20px -2px rgba(19, 77, 9, 0.5);
+          --duration: 0.44s;
+          --font-shadow: var(--font-size);
+          box-shadow: var(--shadow);
+          transform: translateY(var(--y)) translateZ(0);
+          transition: transform var(--duration) ease,
+            box-shadow var(--duration) ease;
+
+          &:hover {
+            --y: var(--move-hover);
+            --shadow: var(--shadow-hover);
+          }
+          @media (min-width: 576px) {
+            display: none !important;
+          }
+          @media screen and (max-width: 576px) {
+            width: 100%;
+            position: absolute;
+            bottom: -130px;
+            left: 50%;
+            transform: translate(-50%, 0);
           }
         }
       }

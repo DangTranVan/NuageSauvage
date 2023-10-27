@@ -528,7 +528,7 @@
       // width: 334.15625px;
       border-radius: 9.25px;
       border: none;
-      padding: 23.14px 23.14px 0px 23.14px;
+      // padding: 23.14px 23.14px 0px 23.14px;
       display: flex;
       flex-direction: column;
       min-width: 0;
@@ -539,6 +539,9 @@
       &:hover .card-image .seemore {
         transition: 0.3s;
         height: 51px;
+        @media screen and (max-width: 576px) {
+          height: 30px;
+        }
       }
 
       .card-image {
@@ -569,7 +572,6 @@
 
           a {
             transition: 0.3s;
-            
 
             .btn-seemore {
               // padding: 12.94px 39.8px;
@@ -588,6 +590,14 @@
               background: #134d09;
               transition: ease 0.5s;
 
+              @media screen and (max-width: 1200px) {
+                padding: 12.94px 7.8px;
+              }
+              @media screen and (max-width: 576px) {
+                padding: 1.9px 6.5px;
+                font-size: 14px;
+              }
+
               i {
                 margin-left: 8px;
                 color: #134d09;
@@ -595,6 +605,14 @@
                 border-radius: 50%;
                 padding: 7px 10px 5px 10px;
                 font-size: 14px;
+                @media screen and (max-width: 1200px) {
+                  padding: 6px 8px 5px 8px !important;
+                  font-size: 8px;
+                }
+                @media screen and (max-width: 576px) {
+                  padding: 4px 6px 4px 8px;
+                  font-size: 11px;
+                }
               }
             }
           }
@@ -605,7 +623,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 23.14px !important;
+        // padding-top: 23.14px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
 
