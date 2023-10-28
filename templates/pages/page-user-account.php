@@ -123,15 +123,36 @@
                                         <?php wp_nonce_field('form_change_avatar'); ?>
 
                                         <p id="hk-success" style="display:none">Cập nhập thành công</p>
+                                        <!-- <div class="form_img_bt">
+                                            <p class="border_img">
+                                                <?php
+                                                $user = wp_get_current_user();
+                                                $custom_avatar = get_user_meta($user->ID, 'custom_avatar', true);
+                                                if ($custom_avatar) {
+                                                    echo '<img id ="blah" src="' . $custom_avatar . '" class="custom_avatar"/>';
+                                                } else {
+                                                    echo '<img id ="blah" src="' . get_avatar_url($user->ID) . '" class="custom_avatar />';
+                                                }
+                                                ?>
+                                            </p>
+                                            <div class="submit_update_avatar">
+                                                <p>
+                                                    <input type="file" id="upload_avatar " accept="image/*" required>
+                                                </p>
+                                                <p>
+                                                    <button type="submit" class="btn-submit notranslate">Submit</button>
+                                                </p>
+                                            </div>
+                                        </div> -->
                                         <div class="form_img_bt">
                                             <p class="border_img">
                                                 <?php
                                                 $user = wp_get_current_user();
                                                 $custom_avatar = get_user_meta($user->ID, 'custom_avatar', true);
                                                 if ($custom_avatar) {
-                                                    echo '<img src="' . $custom_avatar . '" class="custom_avatar" />';
+                                                    echo '<img id="blah" src="' . $custom_avatar . '" class="custom_avatar"/>';
                                                 } else {
-                                                    echo '<img src="' . get_avatar_url($user->ID) . '" class="custom_avatar" />';
+                                                    echo '<img id="blah" src="' . get_avatar_url($user->ID) . '" class="custom_avatar" />';
                                                 }
                                                 ?>
                                             </p>
@@ -288,3 +309,19 @@
 } ?>
 
 <?php get_footer(); ?>
+
+<script>
+    // Get the file input element by its ID
+    const upload_avatar = document.getElementById("upload_avatar");
+    const blah = document.getElementById("blah");
+
+    // Add an event listener to the file input
+    upload_avatar.addEventListener("change", function(evt) {
+        const file = this.files[0]; // Get the selected file
+
+        if (file) {
+            // Create a URL for the selected file and set it as the image source
+            blah.src = URL.createObjectURL(file);
+        }
+    });
+</script>

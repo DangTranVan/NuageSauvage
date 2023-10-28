@@ -186,8 +186,10 @@ if ($terms->taxonomy == 'product_tag') {
 		<div class="woocommerce-products-tabs">
 			<div class="container">
 				<div class="items">
-					<a href="<?php echo get_term_link('hoi-thao-dang-dien-ra-sap-dien-ra', 'product_cat') ?>"><button class="btn btn-cus btn-cus--green <?php echo ($term_slug == "hoi-thao-dang-dien-ra-sap-dien-ra") ? 'active' : '' ?>"><?php $term = get_term_by('slug', 'hoi-thao-dang-dien-ra-sap-dien-ra', 'product_cat');echo $term->name; ?></button></a>
-					<a href="<?php echo get_term_link('hoi-thao-truoc-day', 'product_cat') ?>"><button class="btn btn-cus btn-cus--green <?php echo ($term_slug == "hoi-thao-truoc-day") ? 'active' : '' ?>"><?php $term = get_term_by('slug', 'hoi-thao-truoc-day', 'product_cat');echo $term->name; ?></button></a>
+					<a href="<?php echo get_term_link('hoi-thao-dang-dien-ra-sap-dien-ra', 'product_cat') ?>"><button class="btn btn-cus btn-cus--green <?php echo ($term_slug == "hoi-thao-dang-dien-ra-sap-dien-ra") ? 'active' : '' ?>"><?php $term = get_term_by('slug', 'hoi-thao-dang-dien-ra-sap-dien-ra', 'product_cat');
+																																																											echo $term->name; ?></button></a>
+					<a href="<?php echo get_term_link('hoi-thao-truoc-day', 'product_cat') ?>"><button class="btn btn-cus btn-cus--green <?php echo ($term_slug == "hoi-thao-truoc-day") ? 'active' : '' ?>"><?php $term = get_term_by('slug', 'hoi-thao-truoc-day', 'product_cat');
+																																																				echo $term->name; ?></button></a>
 					<a href="<?php echo site_url('/xuong-rieng-duoc-dat-truoc'); ?>"><button class="btn btn-cus btn-cus--green"><?php echo get_the_title(423); ?></button></a>
 				</div>
 			</div>
@@ -381,12 +383,11 @@ if ($terms->taxonomy == 'product_tag') {
 	<div class="product_search">
 		<div class="container">
 			<div class="row">
-				<!-- <div class="col-12 col-lg-2"></div> -->
 				<div class="col-12">
 					<h2 class="title text-center">RÉSULTATS DE RECHERCHE</h2>
 					<div class="search_form">
 						<?php
-						echo do_shortcode('[ivory-search id="1017" title="AJAX Search Form"]');
+						echo do_shortcode('[ivory-search id="421" title="AJAX Search Form"]');
 						?>
 					</div>
 

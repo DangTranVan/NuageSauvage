@@ -3,7 +3,7 @@ get_header();
 $queried_object = get_queried_object();
 global $post;
 ?>
-<section class="page-blogs" >
+<section class="page-blogs">
     <div class="page-blog">
         <div class="container">
             <div class="row">
@@ -32,7 +32,7 @@ global $post;
                     ?>
                         <h4 class="mb-3 mb-md-4"><?php echo count($getposts->posts) ?> kết quả tìm kiếm được tìm thấy</h4>
 
-                        <div class="row row-cols-4">
+                        <div class="row row-cols-2 row-cols-lg-4 gx-1 gy-1">
                             <?php if ($getposts->have_posts()) : ?>
                                 <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
                                     <div class="col">

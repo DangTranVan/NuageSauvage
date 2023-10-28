@@ -386,8 +386,13 @@
         background: #f4faed;
       }
 
+      @media screen and (max-width: 1200px) {
+        width: 260px;
+        padding: 8px 10px;
+      }
+
       @media screen and (max-width: 576px) {
-        width: 170px;
+        width: 145px;
         font-size: 12px;
         padding: 8px 10px;
         font-weight: 400 !important;
@@ -424,8 +429,17 @@
     .absolute-text {
       top: 14px !important;
 
+      @media screen and (max-width: 1200px) {
+        font-size: 83px !important;
+        line-height: 107px !important;
+      }
+      @media screen and (max-width: 990px) {
+        top: -10px !important;
+        font-size: 64px !important;
+        line-height: 90px !important;
+      }
       @media screen and (max-width: 576px) {
-        top: 26px !important;
+        top: 8px !important;
       }
     }
   }
@@ -625,4 +639,3 @@
     padding-top: 40px !important;
   }
 }
-

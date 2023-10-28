@@ -180,6 +180,10 @@
               font-size: 24px;
               font-weight: 700;
               padding-bottom: 5px;
+
+              @media screen and (max-width: 576px) {
+                text-align: center;
+              }
             }
 
             .wpfPriceFilterRange {
@@ -288,6 +292,10 @@
           min-width: unset !important;
           clear: both;
 
+          @media screen and (max-width: 576px) {
+            margin-top: -35px;
+          }
+
           button {
             padding: 6.8px 33.25px !important;
             background: #134d09 !important;
@@ -323,6 +331,10 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
 
       .phone {
         float: right;
@@ -360,81 +372,7 @@
                 animation: header-phone2 1s infinite
                   cubic-bezier(0.1, 0.57, 0.5, 1);
               }
-              // @-webkit-keyframes header-phone {
-              //   0%,
-              //   30% {
-              //     opacity: 0;
-              //     -webkit-transform: translate3d(-20px, 20px, 0);
-              //     transform: translate3d(-20px, 20px, 0);
-              //   }
 
-              //   80% {
-              //     opacity: 1;
-              //     -webkit-transform: translate3d(0, 0, 0);
-              //     transform: translate3d(0, 0, 0);
-              //   }
-
-              //   100% {
-              //     opacity: 0;
-              //   }
-              // }
-
-              // @keyframes header-phone {
-              //   0%,
-              //   30% {
-              //     opacity: 0;
-              //     -webkit-transform: translate3d(-20px, 20px, 0);
-              //     transform: translate3d(-20px, 20px, 0);
-              //   }
-
-              //   80% {
-              //     opacity: 1;
-              //     -webkit-transform: translate3d(0, 0, 0);
-              //     transform: translate3d(0, 0, 0);
-              //   }
-
-              //   100% {
-              //     opacity: 0;
-              //   }
-              // }
-
-              // @-webkit-keyframes header-phone2 {
-              //   0% {
-              //     opacity: 0;
-              //     -webkit-transform: translate3d(-20px, 20px, 0);
-              //     transform: translate3d(-20px, 20px, 0);
-              //   }
-
-              //   70%,
-              //   90% {
-              //     opacity: 1;
-              //     -webkit-transform: translate3d(0, 0, 0);
-              //     transform: translate3d(0, 0, 0);
-              //   }
-
-              //   100% {
-              //     opacity: 0;
-              //   }
-              // }
-
-              // @keyframes header-phone2 {
-              //   0% {
-              //     opacity: 0;
-              //     -webkit-transform: translate3d(-20px, 20px, 0);
-              //     transform: translate3d(-20px, 20px, 0);
-              //   }
-
-              //   70%,
-              //   90% {
-              //     opacity: 1;
-              //     -webkit-transform: translate3d(0, 0, 0);
-              //     transform: translate3d(0, 0, 0);
-              //   }
-
-              //   100% {
-              //     opacity: 0;
-              //   }
-              // }
               @keyframes header-phone {
                 0%,
                 30% {
@@ -520,12 +458,11 @@
       // padding-top: 3rem;
     }
     .card {
-      // padding-right: 0rem !important;
       cursor: pointer;
       position: relative;
       text-align: center;
       height: 411.5px;
-      // width: 334.15625px;
+      width: 334.15625px;
       border-radius: 9.25px;
       border: none;
       // padding: 23.14px 23.14px 0px 23.14px;
@@ -535,6 +472,17 @@
       word-wrap: break-word;
       background-color: #fff;
       background-clip: border-box;
+
+      @media screen and (max-width: 1400px) {
+        width: auto;
+      }
+      @media screen and (max-width: 1200px) {
+        height: 320.5px !important;
+      }
+      @media screen and (max-width: 576px) {
+        padding: 6.14px;
+        height: 240.5px !important;
+      }
 
       &:hover .card-image .seemore {
         transition: 0.3s;
@@ -559,6 +507,14 @@
             object-fit: cover;
             border-radius: 20px;
             transition: 0.3s;
+
+            @media screen and (max-width: 1200px) {
+              height: 159.31px !important;
+            }
+            @media screen and (max-width: 576px) {
+              height: 142.31px !important;
+              width: 100% !important;
+            }
           }
         }
 
@@ -571,6 +527,10 @@
           transition: height 0.5s;
 
           a {
+            color: white;
+            background: #134d09;
+            transition: ease 0.5s;
+            font-weight: 600;
             transition: 0.3s;
 
             .btn-seemore {
@@ -594,8 +554,25 @@
                 padding: 12.94px 7.8px;
               }
               @media screen and (max-width: 576px) {
-                padding: 1.9px 6.5px;
+                padding: 3.9px 6.5px;
                 font-size: 14px;
+              }
+
+              a {
+                padding: 12.94px 39.8px;
+                width: 100%;
+                border-radius: 0px 0px 20px 20px;
+                color: white;
+                background: #134d09;
+                transition: ease 0.5s;
+
+                @media screen and (max-width: 1200px) {
+                  padding: 12.94px 7.8px;
+                }
+                @media screen and (max-width: 576px) {
+                  padding: 1.9px 6.5px;
+                  font-size: 14px;
+                }
               }
 
               i {
@@ -605,6 +582,7 @@
                 border-radius: 50%;
                 padding: 7px 10px 5px 10px;
                 font-size: 14px;
+
                 @media screen and (max-width: 1200px) {
                   padding: 6px 8px 5px 8px !important;
                   font-size: 8px;
@@ -627,6 +605,10 @@
         padding-left: 0px !important;
         padding-right: 0px !important;
 
+        @media screen and (max-width: 576px) {
+          padding: 0.3rem 2px 2px 2px !important;
+        }
+
         .card-title {
           margin: 0px !important;
 
@@ -644,6 +626,14 @@
               line-height: 33px;
               margin: 0px !important;
               font-size: 24px;
+
+              @media screen and (max-width: 1200px) {
+                font-size: 18px !important;
+              }
+              @media screen and (max-width: 576px) {
+                line-height: unset !important;
+                font-size: 13.5px !important;
+              }
             }
           }
         }
@@ -655,8 +645,20 @@
           font-weight: 700 !important;
           color: #134d09 !important;
 
+          @media screen and (max-width: 576px) {
+            margin-top: unset;
+          }
+
           span {
             font-family: Nunito, sans-serif;
+
+            @media screen and (max-width: 1200px) {
+              font-size: 18px !important;
+            }
+            @media screen and (max-width: 576px) {
+              line-height: unset !important;
+              font-size: 13.5px !important;
+            }
           }
         }
       }
@@ -676,7 +678,11 @@ h6 {
   font-weight: 700;
   color: #134d09;
 }
-
+.mb-4 {
+  @media screen and (max-width: 576px) {
+    text-align: center;
+  }
+}
 .woocommerce .woocommerce-breadcrumb {
   padding: 14px 0px;
   background: #f4faed;
@@ -687,6 +693,12 @@ h6 {
   color: #134d09;
   font-weight: bold;
   font-size: 16px;
+
+  @media screen and (max-width: 576px) {
+    padding: 5px 0px;
+    margin-bottom: 40px;
+    padding-left: 1rem;
+  }
 }
 
 .woocommerce .woocommerce-breadcrumb a {
@@ -694,4 +706,22 @@ h6 {
   text-decoration: none;
   font-size: 16px;
   font-weight: normal;
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
+}
+
+.related {
+  .owl-dots {
+    display: none;
+  }
+}
+
+.woocommerce-result-count {
+  @media (max-width: 576px) {
+    width: 50%;
+    font-size: 15px !important;
+    padding-bottom: 1rem;
+  }
 }

@@ -611,58 +611,99 @@
               border-radius: 12px;
               width: 100%;
               height: 690px;
+
+              @media screen and (max-width: 576px) {
+                height: 200px !important;
+              }
             }
           }
         }
 
         .text-engagements {
           padding: 20px 0;
+
+          p {
+            @media screen and (max-width: 576px) {
+              font-weight: 400 !important;
+              text-align: justify;
+            }
+          }
         }
 
         .responsable {
           position: relative;
+          .fcolreverse-mobile {
+            @media screen and (max-width: 576px) {
+              flex-direction: column-reverse;
+            }
+            .cinq_articles {
+              height: 100%;
+              display: flex;
+              margin-left: 20px;
+              flex-direction: column;
+              justify-content: center;
 
-          .cinq_articles {
-            height: 100%;
-            display: flex;
-            margin-left: 20px;
-            flex-direction: column;
-            justify-content: center;
+              @media screen and (max-width: 576px) {
+                margin-left: unset !important;
+                margin-top: 20px;
+              }
 
-            li {
-              font-weight: 700;
-              font-size: 24px;
-              line-height: 33px;
-              color: #000f07;
-              padding-left: 8px;
-              margin: 30px 0;
-              list-style: none;
-              position: relative;
+              li {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 33px;
+                color: #000f07;
+                padding-left: 8px;
+                margin: 30px 0;
+                list-style: none;
+                position: relative;
 
-              &::before {
-                position: absolute;
-                content: url(https://nuagesauvage.fr/wp-content/themes/NUAGE-SAUVAGE/assets/images/nvt/maskgr.png);
-                top: 0;
-                left: -50px;
+                @media screen and (max-width: 576px) {
+                  margin: 15px 0 !important;
+                  font-weight: 400 !important;
+                  font-size: 16px !important;
+                  line-height: 22px !important;
+                }
+
+                &::before {
+                  position: absolute;
+                  content: url(https://nuagesauvage.fr/wp-content/themes/NUAGE-SAUVAGE/assets/images/nvt/maskgr.png);
+                  top: 0;
+                  left: -50px;
+
+                  @media screen and (max-width: 576px) {
+                    transform: scale(0.7);
+                    top: -8px !important;
+                    left: -35px !important;
+                  }
+                }
               }
             }
-          }
 
-          .img-right {
-            img {
-              height: 570px;
-              padding: 20px;
-              width: 100%;
-              border-radius: 30px;
+            .img-right {
+              img {
+                height: 570px;
+                padding: 20px;
+                width: 100%;
+                border-radius: 30px;
+
+                @media screen and (max-width: 576px) {
+                  height: 290px !important;
+                }
+                @media screen and (max-width: 576px) {
+                  padding: unset !important;
+                  border-radius: 4px;
+                }
+              }
             }
-          }
 
-          &::after {
-            position: absolute;
-            content: url(.https://nuagesauvage.fr/wp-content/themes/NUAGE-SAUVAGE/assets/images/nvt/Pattern.png);
-            top: 0;
-            left: -250px;
-            z-index: -1;
+            &::after {
+              position: absolute;
+              content: url(.https://nuagesauvage.fr/wp-content/themes/NUAGE-SAUVAGE/assets/images/nvt/Pattern.png);
+              top: 0;
+              left: -250px;
+              z-index: -1;
+            }
           }
         }
 
@@ -670,6 +711,13 @@
           position: relative;
           height: 630px;
           margin: 80px 0;
+
+          @media screen and (max-width: 576px) {
+            height: 460px !important;
+            margin-top: 40px !important;
+            margin-bottom: unset !important;
+            object-position: 56%;
+          }
 
           img {
             position: absolute;
@@ -684,12 +732,30 @@
             z-index: 2;
             padding: 30px;
 
+            @media screen and (max-width: 1200px) {
+              padding: 10px 30px !important;
+              margin-bottom: 15px;
+            }
+
+            @media screen and (max-width: 576px) {
+              padding: 10px !important;
+            }
+
             .text-thes {
+              @media screen and (max-width: 576px) {
+                margin: unset !important;
+              }
               p {
                 font-weight: 700;
                 font-size: 18px;
                 line-height: 28px;
                 color: #134d09;
+
+                @media screen and (max-width: 576px) {
+                  font-size: 14px !important;
+                  line-height: 19px !important;
+                  margin: 10px !important;
+                }
               }
             }
             .btn-cus-nvt {
@@ -725,6 +791,11 @@
               &:hover {
                 --y: var(--move-hover);
                 --shadow: var(--shadow-hover);
+              }
+
+              @media screen and (max-width: 576px) {
+                margin: 0px auto;
+                margin-left: 0;
               }
             }
           }

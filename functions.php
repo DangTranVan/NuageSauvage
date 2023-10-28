@@ -230,7 +230,7 @@ add_action('init', 'wpb_custom_new_menu');
 
 
 
-
+/////upload-image
 function hk_user_upload_image($file = array())
 {
     require_once(ABSPATH . 'wp-admin/includes/admin.php');
