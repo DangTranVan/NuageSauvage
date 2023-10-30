@@ -44,11 +44,11 @@ $tax_product = $terms[0]->slug;
                 if (empty($product_price)) {
                     //$product_price = 'Liên hệ';
                 ?>
-                    <!-- <div class="price">
+                    <div class="price">
                         <a href="<?php //echo site_url('/lien-he'); 
                                     ?>"><button class="btn"><?php //echo $product_price; 
                                                             ?></button></a>
-                    </div> -->
+                    </div>
                 <?php
                 } else {
                     if ($tax_product == 'atelier-passe') {

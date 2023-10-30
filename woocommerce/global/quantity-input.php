@@ -39,45 +39,5 @@ if ($max_value && $min_value === $max_value) {
 ?>
 
 <style>
-	.quantity input::-webkit-outer-spin-button,
-	.quantity input::-webkit-inner-spin-button {
-		display: none;
-		margin: 0;
-	}
-
-	.quantity input.qty {
-		appearance: textfield;
-		-webkit-appearance: none;
-		-moz-appearance: textfield;
-	}
-
-	.quantity input.qty_button {
-		-webkit-appearance: button;
-		width: 40px;
-		height: 33px;
-		background: none !important;
-		content: "\f068";
-		font-family: fontawesome;
-		font-size: 19px;
-		color: #a6a9b2;
-		text-align: center;
-		/* line-height: 33px; */
-		cursor: pointer;
-		border: none;
-		font-weight: 900 !important;
-	}
-
-	.quantity .input-text {
-		height: 30px;
-		border: none;
-		outline: none;
-		font-size: 24px;
-		/* font-weight: bold; */
-		width: 50px !important;
-	}
-
-	.quantity {
-		display: inline-flex;
-		/* border: 1px solid #ddd; */
-	}
+	
 </style>

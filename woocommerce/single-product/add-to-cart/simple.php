@@ -45,11 +45,11 @@ if ( $product->is_in_stock() ) : ?>
 
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
-		<div class="btn-addcart d-flex justify-content-between">
+		<!-- <div class="btn-addcart d-flex justify-content-between">
 		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><i class="fas fa-shopping-cart me-2"></i><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-		</div>
+		</div> -->
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>

@@ -21,6 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 get_header('shop'); ?>
+<?php $current_term = array_shift(array_values(get_the_terms(get_the_ID(), 'product_cat'))); ?>
 <?php
 /**
  * woocommerce_before_main_content hook.
@@ -28,35 +29,69 @@ get_header('shop'); ?>
  * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
  * @hooked woocommerce_breadcrumb - 20
  */
-do_action('woocommerce_before_main_content');
-?>
-
-<?php while (have_posts()) : ?>
-	<?php the_post(); ?>
-
-	<?php wc_get_template_part('content', 'single-product'); ?>
-
-<?php endwhile; // end of the loop. 
+// do_action('woocommerce_before_main_content');
 ?>
 
 <?php
-/**
- * woocommerce_after_main_content hook.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
-do_action('woocommerce_after_main_content');
+if ($current_term->slug == "hoi-thao-dang-dien-ra-sap-dien-ra" || $current_term->slug == "hoi-thao-truoc-day") {
+	get_template_part('templates/block/introduce', 'banner');
 ?>
-
+	<div class="breadcrumb_product">
+		<div class="section__breadcrumb">
+			<div class="container">
+				<?php the_breadcrumb(); ?>
+			</div>
+		</div>
+	</div>
 <?php
-/**
- * woocommerce_sidebar hook.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action('woocommerce_sidebar');
+} else {
+	get_template_part('templates/block/breadcrumb', '');
+}
 ?>
 
+<div class="single-product-custom">
+	<?php if ($current_term->slug == "hoi-thao-dang-dien-ra-sap-dien-ra" || $current_term->slug == "hoi-thao-truoc-day") {
+	?>
+		<div class="woocommerce-products-tabs">
+			<div class="container">
+				<div class="items">
+					<a href="<?php echo get_term_link('hoi-thao-dang-dien-ra-sap-dien-ra', 'product_cat') ?>"><button class="btn btn-cus btn-cus--green <?php echo ($current_term->slug == "hoi-thao-dang-dien-ra-sap-dien-ra") ? 'active' : '' ?>">Atelier encour/ à venir</button></a>
+					<a href="<?php echo get_term_link('hoi-thao-truoc-day', 'product_cat') ?>"><button class="btn btn-cus btn-cus--green <?php echo ($current_term->slug  == "hoi-thao-truoc-day") ? 'active' : '' ?>">Atelier passé</button></a>
+					<a href="<?php echo site_url('/xuong-rieng-duoc-dat-truoc'); ?>"><button class="btn btn-cus btn-cus--green">Atelier prive (a reservez)</button></a>
+				</div>
+			</div>
+		</div>
+	<?php
+	}
+	?>
+	<div class="container">
+		<?php while (have_posts()) : ?>
+			<?php the_post(); ?>
+
+			<?php wc_get_template_part('content', 'single-product'); ?>
+
+		<?php endwhile; // end of the loop. 
+		?>
+
+		<?php
+		/**
+		 * woocommerce_after_main_content hook.
+		 *
+		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+		 */
+		do_action('woocommerce_after_main_content');
+		?>
+
+		<?php
+		/**
+		 * woocommerce_sidebar hook.
+		 *
+		 * @hooked woocommerce_get_sidebar - 10
+		 */
+		//do_action('woocommerce_sidebar');
+		?>
+	</div>
+</div>
 <?php
 get_footer('shop');
 

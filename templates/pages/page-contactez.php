@@ -33,7 +33,7 @@
             <div class="row justify-content-center flex-md-row flex-column-reverse">
                 <div class="col-md-5 col-12 flex-md-row">
                     <div class="form">
-                        <?php echo do_shortcode('[contact-form-7 id="77789d1" title="Form atelier prive"]') ?>
+                        <?php echo do_shortcode('[contact-form-7 id="61b8b6b" title="Form liên hệ 1"]') ?>
                     </div>
                 </div>
                 <div class="col-md-5 col-12 d-flex align-items-center">
