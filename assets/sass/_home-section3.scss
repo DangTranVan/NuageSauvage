@@ -75,6 +75,12 @@
               top: -30px !important;
             }
 
+            @media screen and (max-width: 576px){
+              top: 26px !important;
+              font-size: 48px !important;
+              line-height: 55px !important;
+            }
+
             h1 {
               font-family: "Dancing Script", cursive;
               font-weight: 700;
@@ -133,7 +139,7 @@
             --y: var(--move-hover);
             --shadow: var(--shadow-hover);
           }
-          @media (min-width: 576px)  {
+          @media (min-width: 576px) {
             display: block !important;
           }
 

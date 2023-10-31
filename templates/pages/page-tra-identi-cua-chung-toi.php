@@ -14,13 +14,13 @@
                 <div class="container">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist" style="padding: 14px 0;">
                         <li class="nav-item " role="presentation">
-                            <button class="nav-link active after" id="pills-introduce-tab" data-bs-toggle="pill" data-bs-target="#pills-introduce" type="button" role="tab" aria-controls="pills-introduce" aria-selected="true">Giới thiệu chung</button>
+                            <button class="nav-link active after" id="pills-introduce-tab" data-bs-toggle="pill" data-bs-target="#pills-introduce" type="button" role="tab" aria-controls="pills-introduce" aria-selected="true">Nos Producteur</button>
                         </li>
                         <li class="nav-item " role="presentation">
-                            <button class="nav-link after" id="pills-achievement-tab" data-bs-toggle="pill" data-bs-target="#pills-achievement" type="button" role="tab" aria-controls="pills-achievement" aria-selected="false" style="margin-left: 50px;">Thành tựu</button>
+                            <button class="nav-link after" id="pills-achievement-tab" data-bs-toggle="pill" data-bs-target="#pills-achievement" type="button" role="tab" aria-controls="pills-achievement" aria-selected="false" style="margin-left: 50px;">Notre Fondatrice</button>
                         </li>
                         <li class="nav-item " role="presentation">
-                            <button class="nav-link " id="pills-active-tab" data-bs-toggle="pill" data-bs-target="#pills-active" type="button" role="tab" aria-controls="pills-active" aria-selected="false" style="margin-left: 50px;   ">Hoạt động công ty</button>
+                            <button class="nav-link " id="pills-active-tab" data-bs-toggle="pill" data-bs-target="#pills-active" type="button" role="tab" aria-controls="pills-active" aria-selected="false" style="margin-left: 50px;   ">Notre Salon Tra Art</button>
                         </li>
                     </ul>
                 </div>
@@ -330,7 +330,7 @@
                                 <p></p>
                             </div>
                             <div class="img-menu_bubble_tea">
-                                <img src="https://nuagesauvage.fr/wp-content/uploads/2022/12/menu.jpg" alt="Image trà art">
+                                <img style="width: 100%;" src="https://nuagesauvage.fr/wp-content/uploads/2022/12/menu.jpg" alt="Image trà art">
                             </div>
                         </div>
                     </div>

@@ -159,26 +159,27 @@ $tax_parent = get_term($current_term->parent);
 	<div class="spec-info">
 		<div class="row row-cols-1 row-cols-lg-4 g-3 g-lg-0">
 			<?php
-			if (have_rows('info_important')) :
-				while (have_rows('info_important')) : the_row();
-					$image = get_sub_field('image');
-			?>
-					<div class="col">
-						<div class="item">
-							<img src="<?php echo esc_url($image['url']); ?>" />
-							<p class="title"><?php echo get_sub_field('title'); ?></p>
-							<p class="text"><?php echo get_sub_field('info'); ?></p>
-						</div>
-					</div>
-				<?php
-				endwhile;
-			else :
-				?>
-				<!-- <p>Nhập thông tin: TEMPS D’INFUSION, DOSAGE, TEMPÉRATURE D’INFUSION, MOMENT DE LA JOURNÉE</p> -->
-			<?php
-			// Do something...
-			endif;
 
+			if ($tax_parent->slug == "tra" || $tax_parent->slug == "tra-thao-moc" || $tax_parent->slug == "xuong") {
+				if (have_rows('info_important')) :
+					while (have_rows('info_important')) : the_row();
+						$image = get_sub_field('image');
+			?>
+						<div class="col">
+							<div class="item">
+								<img src="<?php echo esc_url($image['url']); ?>" />
+								<p class="title"><?php echo get_sub_field('title'); ?></p>
+								<p class="text"><?php echo get_sub_field('info'); ?></p>
+							</div>
+						</div>
+					<?php
+					endwhile;
+				else :
+					?>
+					
+			<?php
+				endif;
+			}
 			?>
 		</div>
 	</div>

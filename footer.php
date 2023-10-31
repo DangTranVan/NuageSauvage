@@ -170,36 +170,44 @@
     </div>
 </footer>
 <!-- End Footer -->
+<a href="#" class="button-to-top">
+    <div id="bottom_to_top">
+        <i class="fal fa-chevron-up"></i>
+    </div>
+</a>
+<script>
+    var ajaxUrl = '<?php echo admin_url('admin-ajax.php') ?>'
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-(function($){
-	$(document).ready(function(){
-		var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
-		$('#hk-change-avatar').submit(function(e) {
-			e.preventDefault();
-			let fd = new FormData();
-			fd.append("upload_avatar", $("#upload_avatar")[0].files[0]);
-			fd.append("action", "change_user_avatar");
+    (function($) {
+        $(document).ready(function() {
+            var ajaxUrl = '<?php echo admin_url('admin-ajax.php'); ?>';
+            $('#hk-change-avatar').submit(function(e) {
+                e.preventDefault();
+                let fd = new FormData();
+                fd.append("upload_avatar", $("#upload_avatar")[0].files[0]);
+                fd.append("action", "change_user_avatar");
 
-			$.ajax({
-				type: "POST",
-				dataType: "json",
-				url: ajaxUrl,
-				data: fd,
-				contentType: false,
-				processData: false,
-				beforeSend: function () {},
-				success: function (response) {
-					if (response.success) {
-						$("#hk-change-avatar")[0].reset();
-						$('#hk-success').show();
-						$('.custom_avatar').attr('src', response.data)
-					}
-				},
-			});
-		});
-	});
-})(jQuery);
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: ajaxUrl,
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function() {},
+                    success: function(response) {
+                        if (response.success) {
+                            $("#hk-change-avatar")[0].reset();
+                            $('#hk-success').show();
+                            $('.custom_avatar').attr('src', response.data)
+                        }
+                    },
+                });
+            });
+        });
+    })(jQuery);
 </script>
 <?php wp_footer(); ?>
 </div>

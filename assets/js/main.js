@@ -124,7 +124,7 @@
       }
     });
   }
-  
+
   // Button confirm
   $(".btn-submit").on("click", toggleBtn);
 
@@ -179,6 +179,38 @@
       $(".header-bottom").removeClass("header-bottom_active");
     }
   });
+
+  // scroll effect header , bottomToTop , Btn-call
+  window.onscroll = function () {
+    myFunction();
+  };
+  var toTop = document.getElementById("bottom_to_top");
+
+  function myFunction() {
+    if (window.scrollY >= 300) {
+      toTop.style.bottom = "30px";
+
+      if (window.matchMedia("(max-width: 576px)").matches) {
+        $(".header").css({
+          "box-shadow": "0 -6px 20px 6px #cfcfcf",
+        });
+      } else {
+        $(".header").css({
+          top: "-47px",
+          "box-shadow": "0 -6px 20px 6px #cfcfcf",
+        });
+      }
+    } else {
+      toTop.style.bottom = "-100px";
+      $(".header").css({
+        top: "0px",
+        "box-shadow": "unset",
+      });
+    }
+    this.oldScroll = this.scrollY;
+  }
+
+
 })(jQuery);
 
 jQuery(function ($) {

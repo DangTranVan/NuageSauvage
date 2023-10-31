@@ -79,12 +79,6 @@ function the_breadcrumb()
                 $flag = 0;
                 echo '<a href="#" rel="nofollow">Dự án</a>';
             }
-            // elseif (wp_get_post_terms(get_the_ID(), 'danh-muc-tin-tuc') != null) {
-            //     $term =  wp_get_post_terms(get_the_ID(), 'danh-muc-tin-tuc');
-            //     $flag = 1;
-            //     $taxonomy_name = "";
-            //     echo '<a href="#" rel="nofollow">Tin tức / </a>';
-            // } 
             elseif ($current->post_type == 'dich-vu') {
                 $term =  wp_get_post_terms(get_the_ID(), 'danh-muc-dich-vu');
                 $flag = 0;
@@ -98,22 +92,60 @@ function the_breadcrumb()
                 $taxonomy_name = 'product';
             }
 
+            // if ($flag) {
+            //     // $array = array_shift($term);
+            //     $term_link = get_term_link($array->term_id);
+
+            //     $term_parent_id = $array->parent;
+            //     $tax_parent = get_term($term_parent_id);
+            //     $term_parent_link = get_term_link($term_parent_id);
+
+            //     $string = $taxonomy_name . $array->name;
+            //     $string = strtolower($string);
+
+            //     if ($taxonomy_name == 'product') {
+            //         // echo '<a href="'. site_url('/cua-hang').'">Sản phẩm</a>';  
+            //         echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
+            //     } else echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
+            // }
+
+
+            
+
             if ($flag) {
-                // $array = array_shift($term);
                 $term_link = get_term_link($array->term_id);
 
-                $term_parent_id = $array->parent;
-                $tax_parent = get_term($term_parent_id);
-                $term_parent_link = get_term_link($term_parent_id);
+                if (!is_wp_error($term_link)) {
+                    $term_parent_id = $array->parent;
 
-                $string = $taxonomy_name . $array->name;
-                $string = strtolower($string);
+                    if ($term_parent_id) {
+                        $tax_parent = get_term($term_parent_id);
 
-                if ($taxonomy_name == 'product') {
-                    // echo '<a href="'. site_url('/cua-hang').'">Sản phẩm</a>';  
-                    echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
-                } else echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
+                        if (!is_wp_error($tax_parent)) {
+                            $term_parent_link = get_term_link($term_parent_id);
+
+                            if (!is_wp_error($term_parent_link)) {
+                                $string = $taxonomy_name . $array->name;
+                                $string = strtolower($string);
+
+                                if ($taxonomy_name == 'product') {
+                                    echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
+                                } else {
+                                    echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
+                                }
+                            } else {
+                                echo 'Error: Unable to get parent term link';
+                            }
+                        } else {
+                            echo 'Error: Unable to get parent term';
+                        }
+                    }
+                } else {
+                    echo 'Error: Unable to get term link';
+                }
             }
+
+
             echo $sep;
             echo '<a href="#" rel="nofollow">' . ucfirst(get_the_title()) . '</a>';
         }
@@ -142,6 +174,104 @@ function the_breadcrumb()
         echo '</div>';
     }
 }
+// function the_breadcrumb()
+// {
+//     $sep = ' &rsaquo ';
+
+//     if (!is_front_page()) {
+//         echo '<div class="breadcrumbs">';
+//         echo '<a href="' . get_option('home') . '">';
+//         echo 'Accueil';
+//         echo '</a>' . $sep;
+
+//         if (is_category() || is_single()) {
+//             the_category(' &nbsp;&nbsp;|&nbsp;&nbsp;');
+//         } elseif (is_archive() || is_single()) {
+//             // Code for various archive types
+//         } elseif (is_tax()) {
+//             // Code for different taxonomies
+//         } else {
+//             echo '<a href="#" rel="nofollow">Sản phẩm</a>';
+//         }
+
+//         if (is_single()) {
+//             // Code for single posts
+//         }
+
+//         if (is_page()) {
+//             echo '<a href="#" rel="nofollow">' . ucfirst(get_the_title()) . '</a>';
+//         }
+
+//         if (is_home()) {
+//             // Code for the home page
+//         }
+
+//         if (is_search()) {
+//             echo '<a href="#" rel="nofollow">' . 'Tìm kiếm' . '</a>';
+//         }
+
+//         echo '</div>';
+//     }
+// }
+// function the_breadcrumb()
+// {
+//     $sep = ' &rsaquo ';
+
+//     if (!is_front_page()) {
+//         echo '<div class="breadcrumbs">';
+//         echo '<a href="' . get_option('home') . '">';
+//         echo 'Accueil';
+//         echo '</a>' . $sep;
+
+//         if (is_category() || is_single()) {
+//             $categories = get_the_category();
+//             if ($categories) {
+//                 echo '<a href="' . get_category_link($categories[0]->term_id) . '">';
+//                 echo esc_html($categories[0]->name);
+//                 echo '</a>' . $sep;
+//             }
+//         } elseif (is_tax()) {
+//             $term = get_queried_object();
+//             $taxonomy = $term->taxonomy;
+//             $term_link = get_term_link($term);
+
+//             if ($term_link) {
+//                 echo '<a href="' . $term_link . '">';
+//                 echo esc_html($term->name);
+//                 echo '</a>' . $sep;
+//             }
+//         } else {
+//             echo '<a href="#" rel="nofollow">Sản phẩm</a>';
+//         }
+
+//         if (is_single()) {
+//             $categories = get_the_category();
+//             if ($categories) {
+//                 echo '<a href="' . get_category_link($categories[0]->term_id) . '">';
+//                 echo esc_html($categories[0]->name);
+//                 echo '</a>' . $sep;
+//             }
+
+//             echo '<a href="#" rel="nofollow">' . ucfirst(get_the_title()) . '</a>';
+//         }
+
+//         if (is_page()) {
+//             echo '<a href="#" rel="nofollow">' . ucfirst(get_the_title()) . '</a>';
+//         }
+
+//         if (is_home()) {
+//             // Code for the home page
+//         }
+
+//         if (is_search()) {
+//             echo '<a href="#" rel="nofollow">' . 'Tìm kiếm' . '</a>';
+//         }
+
+//         echo '</div>';
+//     }
+// }
+
+
 
 
 function getPostViews($postID)
@@ -172,32 +302,6 @@ function updatePostViews($postID)
     }
     return $count;
 }
-// function getPostViews($postID)
-// { // hàm này dùng để lấy số người đã xem qua bài viết
-//     $count_key = 'post_views_count';
-//     $count = get_post_meta($postID, $count_key, true);
-//     if ($count == '') { // Nếu như lượt xem không có
-//         delete_post_meta($postID, $count_key);
-//         add_post_meta($postID, $count_key, '10');
-//         return "10"; // giá trị trả về bằng 0
-//     }
-//     return $count; // Trả về giá trị lượt xem
-// }
-// function setPostViews($postID)
-// { // hàm này dùng để set và update số lượt người xem bài viết.
-//     $count_key = 'post_views_count';
-//     $count = get_post_meta($postID, $count_key, true);
-//     if ($count == '') {
-//         $count = 0;
-//         delete_post_meta($postID, $count_key);
-//         add_post_meta($postID, $count_key, '0');
-//     } else {
-//         $count++; // cộng đồn view
-//         update_post_meta($postID, $count_key, $count); // update count
-//     }
-// }
-
-
 function toFriendlyTime($timeDifference)
 {
     $seconds = $timeDifference;

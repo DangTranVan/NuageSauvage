@@ -19,12 +19,6 @@
     margin: 50px 0;
 
     .avatar_update {
-      // box-shadow: 0 0 20px rgba(170, 170, 170, 0.2);
-      // width: 660px;
-      // height: 660px;
-      // align-items: center;
-      // display: flex;
-      // justify-content: center;
       .custom_avatar {
         border: 1px solid green;
         width: 600px;
@@ -58,20 +52,6 @@
       background: #ccc;
     }
   }
-  // .custom-button-confirm {
-  //   background: #ff0000;
-  //   padding: 8px;
-  //   color: white;
-  //   border: 1px solid #e3e3e3;
-  //   border-radius: 5px;
-  //   border: 1px solid #ccc;
-  //   display: inline-block;
-  //   padding: 6px 12px;
-  //   cursor: pointer;
-  //   &:hover {
-  //     background: rgb(209, 2, 2);
-  //   }
-  // }
   .preview {
     padding: 30px;
     display: flex;
@@ -92,11 +72,6 @@
     margin-bottom: 20px;
     height: 300px;
   }
-  //   $btn-bgColor: #0ebeff;
-  //   $btn-bgColor-active: #fff;
-  //   $btn-borderRadius: 50px;
-  //   $btn-padding-v: 10px;
-  //   $btn-padding-h: 20px;
 
   .btn-submit {
     position: relative;
@@ -117,9 +92,6 @@
 
     &:hover {
       box-shadow: 1px 1px 6px 1px #ccc;
-      //   background: #fff;
-      //   color: #134d09;
-      //   border: 2px solid green !important;
     }
 
     &:before {
