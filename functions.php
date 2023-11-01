@@ -78,8 +78,7 @@ function the_breadcrumb()
                 $term =  wp_get_post_terms(get_the_ID(), 'danh-muc-du-an');
                 $flag = 0;
                 echo '<a href="#" rel="nofollow">Dự án</a>';
-            }
-            elseif ($current->post_type == 'dich-vu') {
+            } elseif ($current->post_type == 'dich-vu') {
                 $term =  wp_get_post_terms(get_the_ID(), 'danh-muc-dich-vu');
                 $flag = 0;
                 echo '<a href="#" rel="nofollow">Dịch vụ</a>';
@@ -92,58 +91,56 @@ function the_breadcrumb()
                 $taxonomy_name = 'product';
             }
 
-            // if ($flag) {
-            //     // $array = array_shift($term);
-            //     $term_link = get_term_link($array->term_id);
-
-            //     $term_parent_id = $array->parent;
-            //     $tax_parent = get_term($term_parent_id);
-            //     $term_parent_link = get_term_link($term_parent_id);
-
-            //     $string = $taxonomy_name . $array->name;
-            //     $string = strtolower($string);
-
-            //     if ($taxonomy_name == 'product') {
-            //         // echo '<a href="'. site_url('/cua-hang').'">Sản phẩm</a>';  
-            //         echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
-            //     } else echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
-            // }
-
-
-            
-
             if ($flag) {
+                // $array = array_shift($term);
                 $term_link = get_term_link($array->term_id);
 
-                if (!is_wp_error($term_link)) {
-                    $term_parent_id = $array->parent;
+                $term_parent_id = $array->parent;
+                $tax_parent = get_term($term_parent_id);
+                $term_parent_link = get_term_link($term_parent_id);
 
-                    if ($term_parent_id) {
-                        $tax_parent = get_term($term_parent_id);
+                $string = $taxonomy_name . $array->name;
+                $string = strtolower($string);
 
-                        if (!is_wp_error($tax_parent)) {
-                            $term_parent_link = get_term_link($term_parent_id);
-
-                            if (!is_wp_error($term_parent_link)) {
-                                $string = $taxonomy_name . $array->name;
-                                $string = strtolower($string);
-
-                                if ($taxonomy_name == 'product') {
-                                    echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
-                                } else {
-                                    echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
-                                }
-                            } else {
-                                echo 'Error: Unable to get parent term link';
-                            }
-                        } else {
-                            echo 'Error: Unable to get parent term';
-                        }
-                    }
-                } else {
-                    echo 'Error: Unable to get term link';
-                }
+                if ($taxonomy_name == 'product') {
+                    // echo '<a href="'. site_url('/cua-hang').'">Sản phẩm</a>';  
+                    echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
+                } else echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
             }
+
+
+            // if ($flag) {
+            //     $term_link = get_term_link($array->term_id);
+
+            //     if (!is_wp_error($term_link)) {
+            //         $term_parent_id = $array->parent;
+
+            //         if ($term_parent_id) {
+            //             $tax_parent = get_term($term_parent_id);
+
+            //             if (!is_wp_error($tax_parent)) {
+            //                 $term_parent_link = get_term_link($term_parent_id);
+
+            //                 if (!is_wp_error($term_parent_link)) {
+            //                     $string = $taxonomy_name . $array->name;
+            //                     $string = strtolower($string);
+
+            //                     if ($taxonomy_name == 'product') {
+            //                         echo '<a href="' . $term_parent_link . '">' . ucfirst(strtolower($tax_parent->name)) . '</a>';
+            //                     } else {
+            //                         echo '<a href="' . $term_link . '">' . ucfirst(strtolower($string)) . '</a>';
+            //                     }
+            //                 } else {
+            //                     echo 'Error: Unable to get parent term link';
+            //                 }
+            //             } else {
+            //                 echo 'Error: Unable to get parent term';
+            //             }
+            //         }
+            //     } else {
+            //         echo 'Error: Unable to get term link';
+            //     }
+            // }
 
 
             echo $sep;
@@ -428,4 +425,13 @@ function hk_custom_user_avatar($avatar, $id_or_email, $size, $alt, $args)
     }
 
     return $avatar;
+}
+
+
+add_action('woocommerce_single_product_summary', 'my_extra_button_on_product_page', 30);
+
+function my_extra_button_on_product_page()
+{
+    global $product;
+    echo '<a href="URL">Add to cart</a>';
 }

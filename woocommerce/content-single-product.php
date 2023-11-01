@@ -121,6 +121,7 @@ $tax_parent = get_term($current_term->parent);
 			}
 			?>
 		</div>
+
 		<div class="product_meta">
 			<ul class="more-info">
 				<li>
@@ -176,7 +177,7 @@ $tax_parent = get_term($current_term->parent);
 					endwhile;
 				else :
 					?>
-					
+
 			<?php
 				endif;
 			}

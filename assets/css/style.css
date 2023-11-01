@@ -3940,8 +3940,7 @@ p {
       justify-content: space-around; } }
   @media screen and (max-width: 576px) {
     .button_chitiet {
-      flex-direction: column;
-      width: 100%; } }
+      flex-direction: column; } }
   .button_chitiet .button {
     justify-content: center;
     color: #134d09;

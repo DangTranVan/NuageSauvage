@@ -176,9 +176,11 @@
                                             } else {
                                                 $current_user = wp_get_current_user();
                                             ?>
-                                                <li><a href="<?php echo get_home_url(); ?>/user-account"><span class="dropdown-item"><?php echo $current_user->display_name; ?></span></a></li>
-                                                <li>
-                                                    <hr class="dropdown-divider">
+                                                <!-- <li><a href="<?php echo get_home_url(); ?>/user-account"><span class="dropdown-item"><?php echo $current_user->display_name; ?></span></a></li>
+                                                <li> -->
+                                                <li><a href="<?php echo esc_url(home_url('/user-account')); ?>"><span class="dropdown-item"><?php echo esc_html($current_user->display_name); ?></span></a></li>
+
+                                                <hr class="dropdown-divider">
                                                 </li>
                                                 <li><a href="<?php echo wp_logout_url(get_permalink()); ?>"><span class="dropdown-item">Déconnexion</span></a></li>
                                             <?php
