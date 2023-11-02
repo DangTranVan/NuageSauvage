@@ -69,6 +69,12 @@
                                 <i class="fal fa-clock"></i>
                                 <?php echo get_the_date() ?>
                             </div>
+                            <span class="time mt-3 mb-3 d-none">
+                                <p class="timeago">
+                                    <?php get_template_part('templates/block/get', 'time'); ?></p>
+                                <p class="view">
+                                    <?php echo getPostViews(get_the_ID()); ?> lượt xem </p>
+                            </span>
                             <h3 class="entry-title">
                                 <?php the_title(); ?>
                             </h3>
@@ -121,3 +127,4 @@
 
 
 <?php get_footer(); ?>
+

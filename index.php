@@ -13,3 +13,12 @@
 </main>
 
 <?php get_footer(); ?>
+
+
+<script>
+    var elements = document.querySelectorAll('.active');
+    elements.forEach(function(element) {
+        element.classList.remove('active');
+    });
+    document.getElementById("home").classList.add('active');
+</script>

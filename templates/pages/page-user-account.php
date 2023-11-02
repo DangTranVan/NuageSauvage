@@ -324,4 +324,10 @@
             blah.src = URL.createObjectURL(file);
         }
     });
+
+    var elements = document.querySelectorAll('.active');
+    elements.forEach(function(element) {
+        element.classList.remove('active');
+    });
+    document.getElementById("user").classList.add('active');
 </script>

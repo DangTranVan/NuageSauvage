@@ -455,3 +455,12 @@ if ($terms->taxonomy == 'product_tag') {
 ?>
 </div>
 <?php get_footer('shop'); ?>
+
+
+<script>
+	var elements = document.querySelectorAll('.active');
+	elements.forEach(function(element) {
+		element.classList.remove('active');
+	});
+	document.getElementById("tra").classList.add('active');
+</script>

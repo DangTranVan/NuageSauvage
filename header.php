@@ -312,6 +312,25 @@
                     </div>
                 </div>
             </div>
+            <nav class="nav-menu">
+                <a class="nav-btn" href="<?php echo get_home_url(); ?>" role="button" aria-label="home button" id="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a class="nav-btn" href="<?php echo get_home_url(); ?>/danh-muc-san-pham/tra/" role="button" aria-label="search button" id="tra">
+                    <i class="fas fa-mug-tea"></i>
+                    <span>Thé</span>
+                </a>
+                <a class="nav-btn" href="<?php echo get_home_url(); ?>/category/evenements/" role="button" aria-label="search button" id="news">
+                    <i class="fas fa-file-alt"></i>
+                    <span>News</span>
+                </a>
+                <a class="nav-btn" href="<?php echo get_home_url(); ?>/user-account/" role="button" aria-label="settings button" id="user">
+                    <i class="fas fa-user-alt"></i>
+                    <span>User</span>
+                </a>
+            </nav>
         </header>
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>

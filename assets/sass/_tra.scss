@@ -720,7 +720,8 @@ h6 {
 
 .woocommerce-result-count {
   @media (max-width: 576px) {
-    width: 50%;
+    // width: 50%;
+    width: 40%;
     font-size: 15px !important;
     padding-bottom: 1rem;
   }

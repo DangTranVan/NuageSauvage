@@ -287,47 +287,44 @@
       return false;
     }
   }
+})(jQuery);
+// scroll effect header , bottomToTop , Btn-call
+window.onscroll = function () {
+  myFunction();
+};
+var toTop = document.getElementById("bottom_to_top");
 
-  //lướt chuột cố định menu
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-      $(".header-bottom").addClass("header-bottom_active");
-    } else {
-      $(".header-bottom").removeClass("header-bottom_active");
-    }
-  });
+function myFunction() {
+  if (window.scrollY >= 300) {
+    toTop.style.bottom = "130px";
 
-  // scroll effect header , bottomToTop , Btn-call
-  window.onscroll = function () {
-    myFunction();
-  };
-  var toTop = document.getElementById("bottom_to_top");
-
-  function myFunction() {
-    if (window.scrollY >= 300) {
-      toTop.style.bottom = "30px";
-
-      if (window.matchMedia("(max-width: 576px)").matches) {
-        $(".header").css({
-          "box-shadow": "0 -6px 20px 6px #cfcfcf",
-        });
-      } else {
-        $(".header").css({
-          top: "-47px",
-          "box-shadow": "0 -6px 20px 6px #cfcfcf",
-        });
-      }
-    } else {
-      toTop.style.bottom = "-100px";
+    if (window.matchMedia("(max-width: 576px)").matches) {
       $(".header").css({
-        top: "0px",
-        "box-shadow": "unset",
+        "box-shadow": "0 -6px 20px 6px #cfcfcf",
+      });
+    } else {
+      $(".header").css({
+        top: "-47px",
+        "box-shadow": "0 -6px 20px 6px #cfcfcf",
       });
     }
-    this.oldScroll = this.scrollY;
+  } else {
+    toTop.style.bottom = "-100px";
+    $(".header").css({
+      top: "0px",
+      "box-shadow": "unset",
+    });
   }
-})(jQuery);
-
+  this.oldScroll = this.scrollY;
+}
+// lướt chuột cố định menu
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 200) {
+    $(".header-bottom").addClass("header-bottom_active");
+  } else {
+    $(".header-bottom").removeClass("header-bottom_active");
+  }
+});
 jQuery(function ($) {
   if (!String.prototype.getDecimals) {
     String.prototype.getDecimals = function () {

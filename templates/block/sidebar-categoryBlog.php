@@ -1,4 +1,4 @@
-<div class="hot-news mb-4 w-100">
+<div class="hot-news cate mb-4 w-100">
     <div class="title">Catégorie</div>
     <div class="content">
         <?php

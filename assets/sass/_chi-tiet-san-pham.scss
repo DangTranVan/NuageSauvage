@@ -188,7 +188,7 @@ p {
     // width: 372px !important;
     width: 100% !important;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -286,7 +286,6 @@ p {
   transform: scale(1.02) !important;
 }
 .product_meta {
-  
 }
 
 .button_chitiet {
@@ -686,6 +685,10 @@ p {
 
 .woocommerce-variation-add-to-cart {
   margin-left: 40px;
+
+  @media screen and (max-width: 576px) {
+    padding-bottom: 1rem;
+  }
 }
 .quantity input::-webkit-outer-spin-button,
 .quantity input::-webkit-inner-spin-button {
@@ -754,4 +757,9 @@ p {
     color: red !important;
     width: 100%;
   }
+}
+.input_quantity {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
 }
