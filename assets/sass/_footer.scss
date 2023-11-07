@@ -206,6 +206,14 @@
     color: #fff;
     padding: 12px 0;
 
+    @media screen and (max-width: 980px) {
+      background: white;
+      padding-bottom: 5rem;
+    }
+    // @media screen and (max-width: 560px) {
+    //   font-size: 1rem;
+    // }
+
     .container {
       max-width: 1416px !important;
       p {
@@ -214,6 +222,11 @@
         }
         span {
           color: #5a9b4f;
+        }
+
+        @media screen and (max-width: 980px) {
+          color: #134d09 !important;
+          font-weight: 800;
         }
       }
     }

@@ -32,7 +32,10 @@
                         <div class="contact">
                             <ul class="social list-unstyled mb-0 d-flex">
                                 <li>
-                                    <?php echo do_shortcode('[gtranslate]'); ?>
+                                    <?php echo do_shortcode('[gt-link lang="en" label="English"]'); ?>
+                                    <?php echo do_shortcode('[gt-link lang="fr" label="French"]'); ?>
+                                    <?php echo do_shortcode('[gt-link lang="de" label="German"]'); ?>
+                                    <?php echo do_shortcode('[gt-link lang="vi" label="Vietnamese"]'); ?>
                                 </li>
                             </ul>
                         </div>
@@ -216,38 +219,38 @@
                         <?php echo do_shortcode('[ivory-search id="421" title="AJAX Search Form"]'); ?>
                     </div>
                 </div>
-                <div class="header-underbottom d-none d-xl-block">
-                    <div class="container">
-                        <div class="row">
-                            <div class="d-flex justify-content-between">
-                                <nav>
-                                    <?php
-                                    $primarymenu = array(
-                                        'theme_location'  => 'primary',
-                                        'menu'            => '',
-                                        'container'       => '',
-                                        'container_class' => '',
-                                        'container_id'    => '',
-                                        'menu_class'      => 'slimmenu',
-                                        'menu_id'         => 'primary-menu',
-                                        'echo'            => true,
-                                        'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                                        'walker'          => new wp_bootstrap_navwalker(),
-                                        'before'          => '',
-                                        'after'           => '',
-                                        'link_before'     => '',
-                                        'link_after'      => '',
-                                        'items_wrap'      => '<ul  id="%1$s" class="d-xl-flex d-none list-unstyled mb-0">%3$s</ul>',
-                                        'depth'           => 0,
-                                    );
-                                    if (has_nav_menu('primary')) {
-                                        wp_nav_menu($primarymenu);
-                                    }
-                                    ?>
-                                </nav>
-                                <div class="">
+            </div>
+            <div class="header-underbottom d-none d-xl-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-flex justify-content-between">
+                            <nav>
+                                <?php
+                                $primarymenu = array(
+                                    'theme_location'  => 'primary',
+                                    'menu'            => '',
+                                    'container'       => '',
+                                    'container_class' => '',
+                                    'container_id'    => '',
+                                    'menu_class'      => 'slimmenu',
+                                    'menu_id'         => 'primary-menu',
+                                    'echo'            => true,
+                                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                                    'walker'          => new wp_bootstrap_navwalker(),
+                                    'before'          => '',
+                                    'after'           => '',
+                                    'link_before'     => '',
+                                    'link_after'      => '',
+                                    'items_wrap'      => '<ul  id="%1$s" class="d-xl-flex d-none list-unstyled mb-0">%3$s</ul>',
+                                    'depth'           => 0,
+                                );
+                                if (has_nav_menu('primary')) {
+                                    wp_nav_menu($primarymenu);
+                                }
+                                ?>
+                            </nav>
+                            <div class="">
 
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -331,6 +334,6 @@
                 </a>
             </nav>
         </header>
-    </div>
+
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>

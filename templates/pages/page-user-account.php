@@ -277,18 +277,18 @@
 <?php
 } else {
 ?>
-    <div class="container text-center my-5">
+    <div class="container text-center my-5" style="padding-top: 3%;">
         <div class="mb-3" style="color: #134d09; font-weight: 600; font-size: 24px;">Vous n'êtes pas connecté!</div>
-        <div class="btn" style="border: 2px solid;">
+        <div class="btnss" style="border: 2px solid;">
             <?php
             $primarymenu = array(
-                'theme_location'  => 'my-custom-menu',
+                'theme_location'  => 'max_mega_menu_1',
                 'menu'            => '',
                 'container'       => '',
                 'container_class' => '',
                 'container_id'    => '',
                 'menu_class'      => 'custom-menu',
-                'menu_id'         => 'my-custom-menu',
+                'menu_id'         => 'max_mega_menu_1',
                 'echo'            => true,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker(),
@@ -296,7 +296,7 @@
                 'after'           => '',
                 'link_before'     => '',
                 'link_after'      => '',
-                'items_wrap'      => '<ul  id="menu-notlogin" class="list-unstyled  border-2 border-success mb-0">%3$s</ul>',
+                'items_wrap'      => '<ul  id="%1$s" class="list-unstyled mb-0">%3$s</ul>',
                 'depth'           => 0,
             );
             if (has_nav_menu('primary')) {

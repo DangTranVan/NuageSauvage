@@ -151,11 +151,21 @@
               padding: 24px 64px;
               &:hover {
                 background: rgba(231, 222, 222, 0.186);
+                height: 100% !important;
+              }
+
+              @media screen and (max-width: 1200px) {
+                width: 300px !important;
+                font-size: 20px !important;
+                margin-left: 0 !important;
               }
 
               @media screen and (max-width: 576px) {
                 margin-left: 0 !important;
                 padding: 0 !important;
+                width: 150px !important;
+                height: 38px !important;
+                font-size: 13px !important;
               }
             }
             .nav-link.active {
@@ -812,6 +822,10 @@
               height: 540px;
               width: 100%;
               transition: 0.3s;
+
+              @media screen and (max-width: 576px) {
+                height: 150px !important;
+              }
             }
           }
         }
@@ -894,6 +908,14 @@
                 }
               }
             }
+
+            @media screen and (max-width: 1024px) {
+              --num-cols: 3;
+              --row-height: 130px;
+            }
+            @media screen and (max-width: 576px) {
+              --gap: 7px;
+            }
           }
         }
 
@@ -974,6 +996,7 @@ p {
   position: relative;
   width: 100%;
   height: 481px;
+  // margin-top: 14%;
 
   img {
     width: 100%;
@@ -1024,9 +1047,11 @@ p {
 
   @media screen and (max-width: 768px) {
     height: 250px;
+    // margin-top: 0;
   }
 
   @media screen and (max-width: 576px) {
     height: 129px;
+    // margin-top: 0;
   }
 }

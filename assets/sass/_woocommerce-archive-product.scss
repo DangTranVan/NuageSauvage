@@ -56,10 +56,8 @@
 
       .filter-item.active {
         .term-label {
-          font-weight: 700;
-
-          // line-height: 25px;
-          color: green;
+          font-weight: 700 !important;
+          color: green !important;
         }
 
         // .term-label::after {
@@ -232,7 +230,6 @@
 
   font-size: 20px;
   font-weight: 600;
-
 
   @media screen and (max-width: 1200px) {
     padding-top: 5px;
@@ -651,4 +648,11 @@
   @media screen and (max-width: 576px) {
     padding-top: 40px !important;
   }
+}
+
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 }

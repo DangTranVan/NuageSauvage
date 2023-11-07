@@ -390,7 +390,6 @@ if ($terms->taxonomy == 'product_tag') {
 						echo do_shortcode('[ivory-search id="421" title="AJAX Search Form"]');
 						?>
 					</div>
-
 					<?php
 					woocommerce_result_count();
 					woocommerce_catalog_ordering();
@@ -455,7 +454,6 @@ if ($terms->taxonomy == 'product_tag') {
 ?>
 </div>
 <?php get_footer('shop'); ?>
-
 
 <script>
 	var elements = document.querySelectorAll('.active');

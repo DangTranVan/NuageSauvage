@@ -441,3 +441,19 @@ fieldset {
   display: flex;
   justify-content: end;
 }
+
+.btnss {
+  border-radius: 69.375px;
+  font-weight: 700;
+  font-size: 18.5px;
+  line-height: 25px;
+  color: #134d09;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+
+  ul {
+    padding: 5px 15px;
+  }
+}
